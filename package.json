@@ -1,0 +1,26 @@
+{
+  "name": "portfolio4",
+  "version": "0.1.2",
+  "description": "Portfolio for Viktor Gustafsson (@viktorcarloskar)",
+  "main": "-",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-hb": "^2.6.1",
+    "gulp-less": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "-"
+  },
+  "keywords": [
+    "Portfolio",
+    "Personal",
+    "website",
+    "responsive",
+    "gulp",
+    "handlebars"
+  ],
+  "author": "@viktorcarloskar",
+  "license": "ISC"
+}

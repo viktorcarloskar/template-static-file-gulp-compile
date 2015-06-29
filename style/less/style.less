@@ -1,0 +1,79 @@
+// COLORS
+
+
+// Importing after all this so I could use variables
+@import "font-import.less";
+@import "variables.less";
+@import "mixins.less";
+
+/* HELPING CLASSES */
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/* THOSE HEADLINES */
+
+
+*, *:before, *:after {
+  .box-sizing();
+}
+
+html {
+  font-family: @std-font;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 90%;
+  height: 100%;
+}
+
+@media @tablet {
+  html { font-size: 112%; }
+}
+
+@media @desktop {
+  html { font-size: 120%; }
+}
+
+body {
+  background-color: @color-white;
+  color: @color-black;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  //max-width: @max-width;
+  width: 100%;
+  padding: 0 3%;
+  position: relative;
+}
+@media @desktop {
+  .container {
+    padding: 0 2%;
+  }
+}
+
+b {
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.8rem;
+  width: 100%;
+  font-weight: bold;
+  padding: 5% 0 2% 0;
+  text-align: center;
+}
+a {
+  color: inherit;
+}
+
+::selection {
+  background: @color-selection; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: @color-selection; /* Gecko Browsers */
+}

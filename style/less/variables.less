@@ -1,0 +1,81 @@
+
+@color-white: #fafafa;
+@color-black: #0f0f0f;
+@color-selection: #4f4444;
+
+// VARIABLES
+@mobile:  ~"";
+@tablet:    ~"only screen and (min-width: 40rem)"; // 640px
+@desktop:   ~"only screen and (min-width: 64rem)"; // 1024px
+@bigdesktop:   ~"only screen and (min-width: 90rem)"; // 1440px
+
+@std-font: "proxima_nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+@alt-font: "Open Sans";
+
+	//MEDIA VARIABLES
+
+@desktop:   ~"only screen and (min-width: 960px)";
+@tablet:    ~"only screen and (min-width: 720px) and (max-width: 959px)";
+@mobile: 	~"only screen and (max-width: 719px)";
+
+
+*, *:before, *:after {
+  .box-sizing();
+}
+
+html {
+  font-family: @std-font;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 90%;
+  height: 100%;
+}
+
+@media @tablet {
+  html { font-size: 112%; }
+}
+
+@media @desktop {
+  html { font-size: 120%; }
+}
+
+body {
+  background-color: @color-white;
+  color: @color-black;
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  //max-width: @max-width;
+  width: 100%;
+  padding: 0 3%;
+  position: relative;
+}
+@media @desktop {
+  .container {
+    padding: 0 2%;
+  }
+}
+
+b {
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.8rem;
+  width: 100%;
+  font-weight: bold;
+  padding: 5% 0 2% 0;
+  text-align: center;
+}
+a {
+  color: inherit;
+}
+
+::selection {
+  background: @color-selection; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: @color-selection; /* Gecko Browsers */
+}
