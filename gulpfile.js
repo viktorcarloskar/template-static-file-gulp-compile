@@ -8,7 +8,10 @@ var md2json  = require('gulp-markdown-to-json');
 //var through  = require('through');
 
 gulp.task('connect', function() {
-  connect.server();
+  connect.server({
+    root: "compiled",
+    livereload: true
+  });
 });
 
 gulp.task('compile', function() {
