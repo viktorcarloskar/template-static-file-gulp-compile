@@ -1,5 +1,10 @@
 {{#each projects}}
   {{#each this}}
-    {{this.title}}
+    <section class="post">
+      <h1>{{this.title}}</h1>
+      <div class="post-body">
+        {{{this.body}}}
+      </div>
+    </section>
   {{/each}}
 {{/each}}

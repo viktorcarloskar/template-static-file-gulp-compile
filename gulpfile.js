@@ -3,9 +3,7 @@ var less     = require('gulp-less');
 var connect  = require('gulp-connect');
 var hbs      = require('gulp-hb');
 var gutil    = require('gulp-util');
-//var markdown = require('gulp-markdown');
 var md2json  = require('gulp-markdown-to-json');
-//var through  = require('through');
 
 gulp.task('connect', function() {
   connect.server({
