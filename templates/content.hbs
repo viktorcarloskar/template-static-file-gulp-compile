@@ -1,10 +1,15 @@
-{{#each projects}}
-  {{#each this}}
-    <section class="post">
-      <h1>{{this.title}}</h1>
-      <div class="post-body">
-        {{{this.body}}}
-      </div>
-    </section>
+<div class="intro">
+
+</div>
+<div class="projects">
+  {{#each projects}}
+    {{#each this}}
+      <section class="post">
+        <h1>{{this.title}}</h1>
+        <div class="post-body">
+          {{{this.body}}}
+        </div>
+      </section>
+    {{/each}}
   {{/each}}
-{{/each}}
+</div>

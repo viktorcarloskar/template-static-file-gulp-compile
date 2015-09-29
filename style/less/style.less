@@ -28,6 +28,7 @@ html {
   -webkit-font-smoothing: antialiased;
   font-size: 90%;
   height: 100%;
+	line-height: 150%;
 }
 
 @media @tablet {
@@ -76,4 +77,34 @@ a {
 }
 ::-moz-selection {
   background: @color-selection; /* Gecko Browsers */
+}
+
+
+.intro {
+	min-height: 95vh;
+}
+
+.post {
+	.post-body {
+		position: relative;
+		p {
+			padding-left: 40vw;
+		}
+	}
+	img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 40vw;
+		padding: 0 5vw;
+	}
+	img.fixed {
+		position: fixed;
+	}
+	img.absolute {
+		top: auto;
+		bottom: 0;
+		position: absolute;
+	}
 }

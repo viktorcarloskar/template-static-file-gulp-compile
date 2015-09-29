@@ -25,6 +25,9 @@ gulp.task('compile', function() {
         partials: 'templates/*.hbs'
     }))
     .pipe(gulp.dest('compiled'));
+
+    gulp.src('js/*.js')
+      .pipe(gulp.dest('compiled/js'));
 })
 
 gulp.task('less', function () {
@@ -40,4 +43,5 @@ gulp.task('default', function() {
 	gulp.run('connect');
   	var watchLess = gulp.watch('style/less/*.less', ['less']);
     var watchMarkdown = gulp.watch('data/**/*.md', ['compile']);
+    var watchJS = gulp.watch('js/*.js', ['compile']);
 });
