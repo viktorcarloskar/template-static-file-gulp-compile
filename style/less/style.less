@@ -98,6 +98,8 @@ a {
 		top: 0;
 		width: 40vw;
 		padding: 0 5vw;
+		opacity: 0;
+		transition: opacity 200ms ease-in;
 	}
 	img.fixed {
 		position: fixed;
@@ -106,5 +108,8 @@ a {
 		top: auto;
 		bottom: 0;
 		position: absolute;
+	}
+	img.visible {
+		opacity: 1;
 	}
 }

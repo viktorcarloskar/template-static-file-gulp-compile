@@ -8,6 +8,9 @@ function init() {
     setStickyImageValues(posts[i].querySelectorAll('img'));
   }
   setStickyValues(posts)
+
+  var initScrollEvent = new Event("optimizedScroll")
+  window.dispatchEvent(initScrollEvent);
 }
 
 // Mozilla throttle approach to events
@@ -82,25 +85,34 @@ window.addEventListener("optimizedScroll", function() {
 
     // (Next, change image depending on where in the article the middle of the page is)
     var imageStartVisibility = parseInt(image.dataset.startVisibility);
-    var imageEndVisibility = parseInt(image.dataset.endVisibility);
+    var imageEndVisibility = image.dataset.endVisibility === "undefined" ? undefined : parseInt(image.dataset.endVisibility);
     var prevImageEndVisibility = images[i - 1] ? parseInt(images[i - 1].dataset.endVisibility) : undefined;
     var nextImageStartVisibility = images[i + 1] ? parseInt(images[i + 1].dataset.startVisibility) : undefined;
     var prevImageIndex = images[i - 1] ? parseInt(images[i - 1].dataset.parentIndex) : undefined;
     var nextImageIndex = images[i + 1] ? parseInt(images[i + 1].dataset.parentIndex) : undefined;
 
     // if scrollPosition is between startVisibility and endVisibility show that image
-    // else
-    //  if scrollPosition is smaller then startVisibility:
-    //   check previous if
-    //   it's endVisibility is bigger then scrollPosition, if not:
-    //   check wich one is closest to scrollPosition and show that image
-    //
-    //  else if scrollPosition is bigger then endVisibility:
-    //   check next if it's startVisibility is smaller then scrollPosition,
-    //   if not: check wich one is closest to scrollPosition and show that image
-    // Check start and end visibility, if it does not match check which one
-    // is the closest
-
+    if (scrolledTop >= imageStartVisibility && imageEndVisibility && scrolledTop <= imageEndVisibility) {
+      showImage(image)
+    }
+    else {
+      if (scrolledTop < imageStartVisibility && prevImageEndVisibility < scrolledTop) {
+        showImage(image)
+      }
+      else {
+        hideImage(image)
+      }
+      //  if scrollPosition is smaller then startVisibility:
+      //   check previous if
+      //   it's endVisibility is bigger then scrollPosition, if not:
+      //   check wich one is closest to scrollPosition and show that image
+      //
+      //  else if scrollPosition is bigger then endVisibility:
+      //   check next if it's startVisibility is smaller then scrollPosition,
+      //   if not: check wich one is closest to scrollPosition and show that image
+      // Check start and end visibility, if it does not match check which one
+      // is the closest
+    }
     //
     //
     /*if ((rect.top + rect.height/2) < bodyRect.height/2 && rect.top >= parentRect.top && rect.bottom < parentRect.bottom) {
@@ -114,6 +126,12 @@ window.addEventListener("optimizedScroll", function() {
   }
 });
 
+function showImage(image) {
+  image.classList.add("visible")
+}
+function hideImage(image) {
+  image.classList.remove("visible")
+}
 function setStickyValues(objects) {
   for (var i = 0; i < objects.length; i++) {
     var rect = objects[i].getBoundingClientRect();
