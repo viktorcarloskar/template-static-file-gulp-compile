@@ -68,10 +68,12 @@ window.addEventListener("optimizedScroll", function() {
     if ((scrolledTop + windowHeight/2) >= imageMiddle) {
       image.classList.add('fixed');
       image.style.top = (windowHeight - imageHeight)/2 + "px";
+      showMidMarker();
     }
     else {
       image.classList.remove('fixed');
       image.style.top = "";
+      hideMidMarker();
     }
 
     var imageBottomPosition = parentTop + parentHeight - imageHeight/2;
@@ -93,16 +95,19 @@ window.addEventListener("optimizedScroll", function() {
 
     // if scrollPosition is between startVisibility and endVisibility show that image
     if (scrolledTop >= imageStartVisibility && imageEndVisibility && scrolledTop <= imageEndVisibility) {
-      showImage(image)
+      showImage(image);
     }
     else {
+      //  if scrollPosition is smaller then startVisibility:
       if (scrolledTop < imageStartVisibility && prevImageEndVisibility < scrolledTop) {
-        showImage(image)
+        showImage(image);
+      }
+      else if (!imageEndVisibility && scrolledTop > prevImageEndVisibility) {
+        showImage(image);
       }
       else {
-        hideImage(image)
+        hideImage(image);
       }
-      //  if scrollPosition is smaller then startVisibility:
       //   check previous if
       //   it's endVisibility is bigger then scrollPosition, if not:
       //   check wich one is closest to scrollPosition and show that image
@@ -132,6 +137,12 @@ function showImage(image) {
 function hideImage(image) {
   image.classList.remove("visible")
 }
+function showMidMarker() {
+  
+}
+function hideMidMarker() {
+
+}
 function setStickyValues(objects) {
   for (var i = 0; i < objects.length; i++) {
     var rect = objects[i].getBoundingClientRect();
@@ -146,6 +157,10 @@ function setStickyImageValues(images) {
     var index = i;
     images[i].setAttribute('data-parent-index', index);
 
+    var windowHeight = getWindowHeight();
+    var rect = images[i].getBoundingClientRect();
+    rect.offsetTop = getOffset(images[i])
+
     // parentNode is the p that encapsules the image
     var parentRect = images[i].parentNode.getBoundingClientRect();
     parentRect.offsetTop = getOffset(images[i].parentNode)
@@ -155,14 +170,14 @@ function setStickyImageValues(images) {
       images[i].setAttribute('data-start-visibility', 0);
     }
     else {
-      images[i].setAttribute('data-start-visibility', parentRect.offsetTop);
+      images[i].setAttribute('data-start-visibility', (parentRect.offsetTop - windowHeight/2 - rect.height/2));
     }
     // If last image in post, end visibility = undefined (there is no end)
     if (!images[i+1]) {
       images[i].setAttribute('data-end-visibility', "undefined");
     }
     else {
-      images[i].setAttribute('data-end-visibility', parentRect.offsetTop + parentRect.height);
+      images[i].setAttribute('data-end-visibility', parentRect.offsetTop + (parentRect.height - windowHeight/2 + rect.height/2));
     }
   }
 }
