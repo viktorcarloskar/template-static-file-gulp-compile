@@ -16,8 +16,8 @@ gulp.task('compile', function() {
 
   gulp.src('data/**/*.md')
     .pipe(gutil.buffer())
-    .pipe(md2json('projects.json'))
-    .pipe(gulp.dest('./data'))
+    .pipe(md2json('content.json'))
+    .pipe(gulp.dest('./data'));
   gulp.src('templates/index.html')
     .pipe(hbs({
         data: 'data/*.{js,json}',
@@ -44,4 +44,5 @@ gulp.task('default', function() {
   	var watchLess = gulp.watch('style/less/*.less', ['less']);
     var watchMarkdown = gulp.watch('data/**/*.md', ['compile']);
     var watchJS = gulp.watch('js/*.js', ['compile']);
+    var watchHbs = gulp.watch('templates/*.hbs', ['compile']);
 });

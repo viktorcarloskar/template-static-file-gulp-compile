@@ -1,4 +1,6 @@
 var images = new Array();
+var parts = new Array();
+var body;
 
 function init() {
   images = document.querySelectorAll('.post img')
@@ -7,10 +9,20 @@ function init() {
   for (var i = 0; i < posts.length; i++) {
     setStickyImageValues(posts[i].querySelectorAll('img'));
   }
-  setStickyValues(posts)
+  setStickyValues(posts);
+
+
+  // For color blending on scroll
+  parts = document.querySelectorAll('.part');
+  setStickyValues(parts);
+  setColorValues(parts, true);
 
   var initScrollEvent = new Event("optimizedScroll")
   window.dispatchEvent(initScrollEvent);
+
+  body = document.querySelector("body");
+
+  body.classList.remove("preload");
 }
 
 // Mozilla throttle approach to events
@@ -36,6 +48,11 @@ function init() {
 
 // handle event
 window.addEventListener("optimizedScroll", function() {
+  calculateImageState();
+  calculateBackgroundColor();
+});
+
+function calculateImageState() {
   var scrolledTop = getScrolledLength()
   var windowHeight = getWindowHeight();
 
@@ -129,7 +146,64 @@ window.addEventListener("optimizedScroll", function() {
 
     }*/
   }
-});
+}
+
+function calculateBackgroundColor() {
+  var scrolledTop = getScrolledLength();
+  var windowHeight = getWindowHeight();
+  var scrolledMid = scrolledTop + (windowHeight/2);
+  var fadeWindowSize = 4;
+  var fadeSize = windowHeight/fadeWindowSize;
+
+  var color;
+
+  // Get current scrolled length
+  // Find the part in the scrolled area
+  // Check if the one before is closer than windowHeight/6
+  //    if no one before, set color to part color
+  // Check if the one after is closer than (windowHeight/6)*5
+  for (var i = 0; i < parts.length; i++) {
+    var part = parts[i];
+
+    var partTop = parseInt(part.dataset.originalPosition);
+    var partHeight = parseInt(part.dataset.originalHeight);
+    var partEnd = partTop + partHeight;
+
+    // there is only one part to care about
+    //if (scrolledTop > partTop + windowHeight/fadeWindowSize && scrolledTop < (partTop + partHeight) - (windowHeight/fadeWindowSize)) {
+    //  color = part.dataset.backgroundColor;
+    //}
+    //else {
+      // If part-1
+    //}
+
+    // Top part
+    if (scrolledMid < (partEnd - fadeSize) && i < 1) {
+      color = part.dataset.backgroundColor;
+    }
+    // End part
+    else if ((scrolledTop + fadeSize) > partTop && i == parts.length-1) {
+      color = part.dataset.backgroundColor;
+    }
+    else {
+      if ((scrolledMid - fadeSize) < partTop && (scrolledMid + fadeSize) > partTop && parts[i - 1]) {
+
+        var percentage = ((fadeSize*2) - (scrolledMid-(partTop - fadeSize)))/((fadeSize)*2);
+        //percentage = Math.abs(percentage - 1);
+        //console.log(percentage);
+        color = blender(part.dataset.backgroundColor, parts[i - 1].dataset.backgroundColor, percentage)
+      }
+      /*else if ((scrolledMid - fadeSize) < partEnd && (scrolledMid + fadeSize) > partEnd && parts[i - 1]) {
+        var percentage = (partEnd - scrolledMid) / ((fadeSize));
+        color = blender(part.dataset.backgroundColor, parts[i - 1].dataset.backgroundColor, percentage)
+      }*/
+      else if (scrolledMid < (partEnd - fadeSize) && scrolledMid > (partTop + fadeSize)) {
+        color = part.dataset.backgroundColor;
+      }
+    }
+  }
+  setBackgroundColor(document.querySelector('body'), color);
+}
 
 function showImage(image) {
   image.classList.add("visible")
@@ -138,7 +212,7 @@ function hideImage(image) {
   image.classList.remove("visible")
 }
 function showMidMarker() {
-  
+
 }
 function hideMidMarker() {
 
@@ -182,6 +256,16 @@ function setStickyImageValues(images) {
   }
 }
 
+function setColorValues(objects, setTransparent) {
+  for (var i = 0; i < objects.length; i++) {
+    objects[i].setAttribute('data-background-color', rgbToHex(getBackgroundColor(objects[i])));
+    if (setTransparent) {
+      setBackgroundColor(objects[i], "transparent");
+    }
+  }
+}
+
+
 function getOffset(element) {
     if(typeof element.offsetParent !== 'undefined') {
         var curtop = 0;
@@ -199,4 +283,43 @@ function getScrolledLength() {
 }
 function getWindowHeight() {
   return window.innerHeight;
+}
+
+// Color fading functions
+function setBackgroundColor(element, color) {
+  if (color === "transparent")
+    element.style.backgroundColor = color;
+  else
+    element.style.backgroundColor = "#" + color;
+}
+function getBackgroundColor(element) {
+  return element.style.backgroundColor ? element.style.backgroundColor : element.style.background || window.getComputedStyle(element, null).getPropertyValue("background-color");
+}
+
+function rgbToHex(rgb){
+ rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+ return (rgb && rgb.length === 4) ?
+  ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+  ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+  ("0" + parseInt(rgb[3],10).toString(16)).slice(-2) : '';
+}
+
+function blender(c1, c2, amount) {
+  var r = amount;
+
+  // Combining
+  function n(c) {
+      var t = Math.round(c).toString(16);
+      return t.length === 1 ? "0" + t : t
+  }
+
+  // Separating color and converting to base 10
+  function a(c) {
+      return [parseInt(c[0] + c[1], 16), parseInt(c[2] + c[3], 16), parseInt(c[4] + c[5], 16)]
+  }
+
+  var o = a(c1);
+  var i = a(c2);
+  var u = [(1 - r) * o[0] + r * i[0], (1 - r) * o[1] + r * i[1], (1 - r) * o[2] + r * i[2]];
+  return n(u[0]) + n(u[1]) + n(u[2])
 }

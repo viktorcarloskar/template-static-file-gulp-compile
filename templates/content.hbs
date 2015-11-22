@@ -1,15 +1,58 @@
-<div class="intro">
+<div class="intro hero part">
+  <div class="who-i-am">
+    <div class="image">
 
+    </div>
+    <div class="text">
+      <span class="line">Hi! I'm Viktor. I do UI/UX stuff</span>
+      <span class="line">with great technical knowledge.</span>
+      <!--<span class="line">A creative {{viktorsAge}} year old that do</span>-->
+    </div>
+    <div class="available">
+
+    </div>
+    <div class="scroll">
+      <img src="img/scroll.svg" alt="Icon indicating that there is more content further down" />
+    </div>
+  </div>
 </div>
-<div class="projects">
-  {{#each projects}}
-    {{#each this}}
-      <section class="post">
+<div class="about part wrapper">
+  <div class="image">
+
+  </div>
+  <div class="about-text">
+    <h3 class="swirl">I love to develop using the latest technologies</h3>
+    <h6>My skills include everything from Node.Js, Angular.Js and CSS to Java, Photoshop and beerbrewing (currently brewing in my 25m2 student apartment)</h6>
+  </div>
+</div>
+<div class="resume part">
+  <div class="header-container">
+    <h3 class="center swirl">Resumé summary</h3>
+  </div>
+  <div class="positions">
+    {{#each content.positions}}
+        <article class="position">
+          <h4>{{this.title}}</h4>
+        </article>
+    {{/each}}
+  </div>
+  <div class="header-container">
+    <h6 class="center">Want to know more? Don't fear to look me up on <a href="https://se.linkedin.com/in/viktorcarloskar" title="Viktors LinkedIn">LinkedIn</a>, <a href="#contact">contact me</a> or <a href="http://vigu.se/resume.pdf">download my resumé!</a></h6>
+  </div>
+</div>
+<div class="projects part">
+  <div class="header-container">
+    <h1 class="center swirl green">My stories</h1>
+  </div>
+  {{#each content.projects}}
+      <article class="post">
         <h1>{{this.title}}</h1>
         <div class="post-body">
           {{{this.body}}}
         </div>
-      </section>
-    {{/each}}
+      </article>
   {{/each}}
+</div>
+<div class="contact">
+  <a name="contact"></a>
 </div>

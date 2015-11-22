@@ -1,19 +1,71 @@
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   </head>
-  <body onload="init()">
-    <header>
-      Header
-    </header>
-    <div class="intro">
+  <body onload="init()" class="preload">
+    <div class="intro hero part">
+      <div class="who-i-am">
+        <div class="image">
     
+        </div>
+        <div class="text">
+          <span class="line">Hi! I'm Viktor. I do UI/UX stuff</span>
+          <span class="line">with great technical knowledge.</span>
+          <!--<span class="line">A creative 23 year old that do</span>-->
+        </div>
+        <div class="available">
+    
+        </div>
+        <div class="scroll">
+          <img src="img/scroll.svg" alt="Icon indicating that there is more content further down" />
+        </div>
+      </div>
     </div>
-    <div class="projects">
-          <section class="post">
+    <div class="about part wrapper">
+      <div class="image">
+    
+      </div>
+      <div class="about-text">
+        <h3 class="swirl">I love to develop using the latest technologies</h3>
+        <h6>My skills include everything from Node.Js, Angular.Js and CSS to Java, Photoshop and beerbrewing (currently brewing in my 25m2 student apartment)</h6>
+      </div>
+    </div>
+    <div class="resume part">
+      <div class="header-container">
+        <h3 class="center swirl">Resumé summary</h3>
+      </div>
+      <div class="positions">
+            <article class="position">
+              <h4>Developer of YAMANA</h4>
+            </article>
+            <article class="position">
+              <h4>Team lead/developer of iOS/Android App for Uniaden</h4>
+            </article>
+            <article class="position">
+              <h4>Lead developer on iOS/Android app for DeDU</h4>
+            </article>
+            <article class="position">
+              <h4>Web developer at DeDU since 2012</h4>
+            </article>
+            <article class="position">
+              <h4>Head of IT for Uniaden</h4>
+            </article>
+      </div>
+      <div class="header-container">
+        <h6 class="center">Want to know more? Don't fear to look me up on <a href="https://se.linkedin.com/in/viktorcarloskar" title="Viktors LinkedIn">LinkedIn</a>, <a href="#contact">contact me</a> or <a href="http://vigu.se/resume.pdf">download my resumé!</a></h6>
+      </div>
+    </div>
+    <div class="projects part">
+      <div class="header-container">
+        <h1 class="center swirl green">My stories</h1>
+      </div>
+          <article class="post">
             <h1>Testing to make a markdown post</h1>
             <div class="post-body">
-              <p>Bacon ipsum dolor amet corned beef drumstick capicola, prosciutto cow jowl spare ribs ribeye shankle tenderloin t-bone bacon. Pork belly chicken leberkas, beef ribs brisket pork loin shank kielbasa. Capicola chicken chuck, picanha short ribs venison doner shoulder landjaeger turkey short loin. Pastrami tongue biltong, porchetta ham hock cupim drumstick pork loin. Pork belly prosciutto swine meatloaf, rump spare ribs chicken strip steak turducken tail boudin brisket landjaeger porchetta. Landjaeger pastrami prosciutto turkey alcatra hamburger cow tenderloin andouille cupim turducken bresaola drumstick strip steak. Bresaola cupim venison alcatra pork loin porchetta cow shoulder drumstick.</p>
+              <p>Bacon ipsum dolor amet corned beef drumstick capicola, prosciutto cow jowl spare ribs ribeye shankle tenderloin t-bone bacon. Pork belly chicken leberkas, beef ribs brisket pork loin shank kielbasa. Capicola chicken chuck, picanha short ribs venison doner shoulder landjaeger turkey short loin. Pastrami tongue biltong, porchetta ham hock cupim drumstick pork loin. Pork belly prosciutto swine meatloaf, rump spare ribs chicken <a href="http://google.com/" title="strip steak">strip steak</a> turducken tail boudin brisket landjaeger porchetta. Landjaeger pastrami prosciutto turkey alcatra hamburger cow tenderloin andouille cupim turducken bresaola drumstick strip steak. Bresaola cupim venison alcatra pork loin porchetta cow shoulder drumstick.</p>
     <p>Pancetta biltong frankfurter salami pork loin porchetta ham hock. Cupim ham hock beef meatloaf swine biltong ham sirloin porchetta, frankfurter kielbasa tri-tip venison chuck chicken. Kevin cow shank swine, meatloaf turducken tongue pastrami pork chop pig cupim sirloin drumstick turkey. Landjaeger pork tri-tip ground round bresaola short loin pork belly biltong leberkas alcatra prosciutto tail pork chop.
     <img src="http://40.media.tumblr.com/a2d503bd97bfac52fe44f8d896f6bbbe/tumblr_nn4f6jKGzN1stn28do1_1280.jpg" alt="Some app"></p>
     <p>Cool text and such</p>
@@ -27,8 +79,8 @@
     textitext</p>
     
             </div>
-          </section>
-          <section class="post">
+          </article>
+          <article class="post">
             <h1>Another markdown post. Let&#x27;s see if looping works</h1>
             <div class="post-body">
               <p>Bacon ipsum dolor amet corned beef drumstick capicola, prosciutto cow jowl spare ribs ribeye shankle tenderloin t-bone bacon. Pork belly chicken leberkas, beef ribs brisket pork loin shank kielbasa. Capicola chicken chuck, picanha short ribs venison doner shoulder landjaeger turkey short loin. Pastrami tongue biltong, porchetta ham hock cupim drumstick pork loin. Pork belly prosciutto swine meatloaf, rump spare ribs chicken strip steak turducken tail boudin brisket landjaeger porchetta. Landjaeger pastrami prosciutto turkey alcatra hamburger cow tenderloin andouille cupim turducken bresaola drumstick strip steak. Bresaola cupim venison alcatra pork loin porchetta cow shoulder drumstick.</p>
@@ -43,12 +95,14 @@
     textitext</p>
     
             </div>
-          </section>
+          </article>
+    </div>
+    <div class="contact">
+      <a name="contact"></a>
     </div>
     <footer>
-      Footer
+      Made with <img class="svg icon" src="img/heart.svg" alt="Image of a heart"/>, <img class="svg icon gulp" src="img/gulp.svg" alt="Gulp logo" /> and caffine running through my blood
     </footer>
-
     <script type="text/javascript" src="js/script.js">
 
     </script>
