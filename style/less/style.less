@@ -140,6 +140,8 @@ header {
 		position: absolute;
 		bottom: 30px;
 		left: 0;
+		.transition(all 1200ms @cool-bezier);
+		transition-delay: 1500ms;
 		img {
 			display: block;
 			height: 40px;
@@ -154,9 +156,15 @@ header {
 		}*/
 	}
 }
-.preload .line {
-	opacity: 0 !important;
-	transform: translateY(20px);
+.preload {
+	.line {
+		opacity: 0 !important;
+		transform: translateY(20px);
+	}
+	.scroll {
+		opacity: 0 !important;
+		transform: translateY(20px);
+	}
 }
 .about {
 	//background-color: @color-cool-blue;

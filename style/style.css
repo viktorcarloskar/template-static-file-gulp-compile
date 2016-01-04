@@ -348,6 +348,11 @@ header {
   position: absolute;
   bottom: 30px;
   left: 0;
+  -webkit-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition-delay: 1500ms;
 }
 .intro .scroll img {
   display: block;
@@ -364,6 +369,10 @@ header {
   }
 }
 .preload .line {
+  opacity: 0 !important;
+  transform: translateY(20px);
+}
+.preload .scroll {
   opacity: 0 !important;
   transform: translateY(20px);
 }
