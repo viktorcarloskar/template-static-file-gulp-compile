@@ -86,10 +86,10 @@ header {
 
 .intro {
 	min-height: 99vh;
-	background: @color-cute-yellow;
+	//background: @color-slime-green;
 	position: relative;
 	//background: @color-strong-cyan;
-	//background: @color-cool-blue;
+	background: @color-cool-blue;
 	//-webkit-clip-path: circle(1000vh at 50vw -908vh);
 	//clip-path: circle(100px at center );
 	.image {
@@ -107,7 +107,7 @@ header {
 		width: 90vw;
 
 		//text-transform: uppercase;
-		//color: @color-vintage-white;
+		color: @color-vintage-white;
 		font-size: 26px;
 		font-weight: bold;
 		line-height: 120%;
@@ -167,30 +167,36 @@ header {
 	}
 }
 .about {
-	//background-color: @color-cool-blue;
-	background-color: @color-radical-red;
-
-	height: 90%;
-	height: 90vh;
-	color: @color-vintage-white;
-	div {
-		float: left;
-		width: 100%;
-	}
-	h6 {
-		text-align: left;
-		font-size: 1.2rem;
-	}
 	.image {
 		width: 100%;
 		height: 300px;
-		background-image: url("../img/macbook_gold.png");
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
 	}
 	.about-text {
 		width: 100%;
+	}
+	div {
+		float: left;
+		width: 100%;
+	}
+	h3 {
+		display: inline-block;
+		//margin-bottom: 0;
+	}
+	h6 {
+		text-align: left;
+		font-size: 1.8rem;
+		margin-top: 0;
+		margin-bottom: 6%;
+		line-height: 140%;
+		@media @tablet {
+			font-size: 1.6rem;
+		}
+		@media @desktop {
+			font-size: 1.4rem;
+		}
 	}
 	@media @tablet {
 		height: 110vh;
@@ -201,6 +207,31 @@ header {
 		.about-text {
 			.flex(2);
 		}
+	}
+}
+.about-1 {
+	//background-color: @color-cool-blue;
+	//background-color: @color-pineapple-yellow;
+	//background-color: @color-cool-blue;
+	background-color: @color-grad-1;
+
+	height: 90%;
+	height: 90vh;
+	//color: @color-vintage-white;
+
+	.image {
+			background-image: url("../img/macbook_gold.png");
+	}
+}
+.about-2 {
+	margin-top: -10vh;
+	//background-color: @color-cute-yellow;
+	background-color: @color-grad-2;
+	height: 90%;
+	height: 90vh;
+	//color: @color-vintage-white;
+	.image {
+			background-image: url("../img/test_emoji.svg");
 	}
 }
 .resume {
@@ -225,8 +256,12 @@ header {
     overflow-y: hidden;
     margin: 0 auto;
     white-space: nowrap;
+		* {
+			white-space: normal;
+		}
 		.position {
 			display: inline-block;
+			position: relative;
 			width: 80vw;
 			height: 60vh;
 			//border: 3px solid @color-vintage-white;
@@ -235,9 +270,19 @@ header {
 			margin: 1vw;
 			padding: 1vw;
 			//background: @color-paradise-pink;
+			img, object {
+				display: block;
+				max-width: 100%;
+				max-height: 70%;
+				.center();
+			}
+			.text {
+				height: 30%;
+				position: absolute;
+				bottom: 0;
+			}
 			h4 {
 				display: inline-flex;
-				white-space: normal;
 				font-size: 18px;
 				@media @tablet {
 					font-size: 20px;
@@ -285,7 +330,7 @@ header {
 	@media @tablet {
 		.post-body {
 			padding: 0;
-			p {
+			p, h1, h2, h3, h4, h5 {
 				padding-left: 50vw;
 				max-width: calc(~"50vw +"@max-width/2);
 			}
@@ -327,12 +372,173 @@ header {
 	border-bottom: 0px solid rgba(0, 0, 0, 0.2);
 }
 
-.contact {
-	background-color: @color-black;
-	height: 60vh;
+.contacts {
+	overflow: hidden;
+	clear: both;
+	.contact-way {
+		display: block;
+		width: 50%;
+		padding-bottom: 50%;
+		position: relative;
+		float: left;
+		cursor: pointer;
+		border-bottom: 0px;
+
+		i {
+			font-size: 4rem;
+			overflow: visible;
+			display: inline-block;
+			position: absolute;
+			color: @color-white;
+			width: 50%;
+			height: 50%;
+			top: 0; left: 0; bottom: 0; right: 0;
+			.transform(translate(100%, 100%));
+		}
+		i:before {
+
+			margin: auto;
+			display: inline-block;
+			.transform(translate(-50%, -50%));
+			.transition(all 0.4s @cool-bezier);
+		}
+		i:after {
+			display: inline-block;
+			position: absolute;
+			font-size: 2rem;
+			top: 32%;
+			left: 0;
+			white-space: nowrap;
+			font-weight: bold;
+			.transform(translate(-50%, 0%));
+			.transform(scale(90%));
+			.transition(all 0.4s @cool-bezier);
+			.opacity(0);
+		}
+
+		@media @tablet {
+			width:33.3333%;
+			padding-bottom: 33.3333%;
+			i:after {
+				font-size: 1.4rem;
+			}
+		}
+		@media @desktop {
+			width:16.66666%;
+			padding-bottom: 16.66666%;
+		}
+		@media @bigdesktop {
+			i {
+				font-size: 6rem;
+			}
+			i:after {
+				font-size: 1.5rem;
+			}
+		}
+		.linkedin {
+        background: #0976B4;
+        i:after {
+          content: 'Viktor Gustafsson'
+        }
+    }
+    .twitter {
+      background: #55ACEE;
+      i:after {
+        content: '@viktorcarloskar'
+      }
+    }
+    .instagram {
+      background: #3f729b;
+      i:after {
+        content: '@viktorcarloskar'
+      }
+    }
+    .github {
+      background: #E5E5E5;
+      i {
+        color: #333333;
+      }
+      i:after {
+        content: '@viktorcarloskar'
+      }
+    }
+    .facebook {
+      background: #3B5998;
+      i:after {
+        content: 'Viktor Gustafsson'
+      }
+    }
+    .email {
+      background: #F7CA18;
+      i:after {
+        content: 'viktor@vigu.se'
+      }
+    }
+	}
+	.contact-way:hover {
+		i:before {
+			.transform(translate(-50%, -70%));
+		}
+		i:after {
+			.transform(scale(100%));
+			.transition(all 0.4s @cool-bezier 0.2s);
+			.opacity(1);
+		}
+	}
+	.linkedin {
+			background: #0976B4;
+			i:after {
+				content: 'Viktor Gustafsson'
+			}
+	}
+	.twitter {
+		background: #55ACEE;
+		i:after {
+			content: '@viktorcarloskar'
+		}
+	}
+	.instagram {
+		background: #3f729b;
+		i:after {
+			content: '@viktorcarloskar'
+		}
+	}
+	.github {
+		background: #E5E5E5;
+		i {
+			color: #333333;
+		}
+		i:after {
+			content: '@viktorcarloskar'
+		}
+	}
+	.facebook {
+		background: #3B5998;
+		i:after {
+			content: 'Viktor Gustafsson'
+		}
+	}
+	.email {
+		background: #F7CA18;
+		i:after {
+			content: 'viktor@vigu.se'
+		}
+	}
 }
 
 footer {
+	display: flex;
+	align-items: center;
+	height: 10vh;
+	background-color: @color-title-gray;
+	color: @color-white;
+	@media @tablet {
+		height: 8vh;
+	}
+	.content {
+		text-align: center;
+		.center();
+	}
 	font-size: 18px;
 	.icon {
 		height: 18px;

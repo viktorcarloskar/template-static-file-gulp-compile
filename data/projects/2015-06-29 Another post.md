@@ -1,13 +1,17 @@
 ---
-title: Another markdown post. Let's see if looping works
-date: June 29, 2015
+title: Rethinking Spotify desktop
+date: June 12, 2013
 ---
-Bacon ipsum dolor amet corned beef drumstick capicola, prosciutto cow jowl spare ribs ribeye shankle tenderloin t-bone bacon. Pork belly chicken leberkas, beef ribs brisket pork loin shank kielbasa. Capicola chicken chuck, picanha short ribs venison doner shoulder landjaeger turkey short loin. Pastrami tongue biltong, porchetta ham hock cupim drumstick pork loin. Pork belly prosciutto swine meatloaf, rump spare ribs chicken strip steak turducken tail boudin brisket landjaeger porchetta. Landjaeger pastrami prosciutto turkey alcatra hamburger cow tenderloin andouille cupim turducken bresaola drumstick strip steak. Bresaola cupim venison alcatra pork loin porchetta cow shoulder drumstick.
+Me and some other interaction design students thought the Spotify desktop application needed some love. It had looked the same for some time, and Spotify also got a new graphic profile. So we decided to rethink how the Spotify desktop app could look like. We wanted to do this to challenge ourself and for us to have something fun and productive to do after school.
 
-Pancetta biltong frankfurter salami pork loin porchetta ham hock. Cupim ham hock beef meatloaf swine biltong ham sirloin porchetta, frankfurter kielbasa tri-tip venison chuck chicken. Kevin cow shank swine, meatloaf turducken tongue pastrami pork chop pig cupim sirloin drumstick turkey. Landjaeger pork tri-tip ground round bresaola short loin pork belly biltong leberkas alcatra prosciutto tail pork chop.
-![Cats](http://placekitten.com/g/200/300)
+This was just a fun challenge we decided to test out and we just wanted to challenge ourself. But through connections some designers at Spotify really like the idea and decided to act as a jury for our competition and also sponsored us with some prices.
+![The Spotify logotype](img/spotify-logo.png)
 
-Cool text and such
+### Before
+The old design (0.9.X) was too similar to iTunes; huge lists with a focus on fitting as much content into the window as possible. Most often I, the user, find what I’m looking for (if I’ve e.g. searched for a song) in the 10 results. I am also normally a big fan of dark UI’s, but I believe this one is too dark, and frankly, quite boring.
+![Old Spotify desktop](img/old-spotify.jpg)
+
+![My Spotify desktop redesign](img/spotify1.png)
 
 Short loin jowl meatloaf bacon turducken cow strip steak, salami kevin. Pork belly doner turducken cupim pork pork loin. Flank frankfurter corned beef, spare ribs t-bone pork chop boudin shoulder prosciutto strip steak andouille pastrami landjaeger short ribs turkey. Kielbasa ham sausage salami doner tongue bacon. Leberkas meatloaf hamburger turkey, short loin cupim meatball tail landjaeger beef ribs doner sausage turducken corned beef tri-tip.
 

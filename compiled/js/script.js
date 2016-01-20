@@ -244,14 +244,14 @@ function setStickyImageValues(images) {
       images[i].setAttribute('data-start-visibility', 0);
     }
     else {
-      images[i].setAttribute('data-start-visibility', (parentRect.offsetTop - windowHeight/2 - rect.height/2));
+      images[i].setAttribute('data-start-visibility', (parentRect.offsetTop - windowHeight/2));
     }
     // If last image in post, end visibility = undefined (there is no end)
     if (!images[i+1]) {
       images[i].setAttribute('data-end-visibility', "undefined");
     }
     else {
-      images[i].setAttribute('data-end-visibility', parentRect.offsetTop + (parentRect.height - windowHeight/2 + rect.height/2));
+      images[i].setAttribute('data-end-visibility', parentRect.offsetTop + (parentRect.height - windowHeight/2));
     }
   }
 }

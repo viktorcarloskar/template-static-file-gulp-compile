@@ -100,7 +100,7 @@ h3.swirl,
 h4.swirl,
 h5.swirl,
 h6.swirl {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   line-height: 112%;
   padding-top: 20px;
   position: relative;
@@ -115,7 +115,7 @@ h6.swirl::before {
   height: 14px;
   -webkit-mask-image: url("../img/swiwle.svg");
   mask-image: url("../img/swiwle.svg");
-  background-color: #fbe067;
+  background-color: #ffec89;
   background-repeat: repeat-x;
   position: absolute;
   margin-top: -18px;
@@ -127,7 +127,7 @@ h3.swirl.red::before,
 h4.swirl.red::before,
 h5.swirl.red::before,
 h6.swirl.red::before {
-  background-color: #fe4b4d;
+  background-color: #F79DEA;
 }
 h1.swirl.green::before,
 h2.swirl.green::before,
@@ -135,7 +135,7 @@ h3.swirl.green::before,
 h4.swirl.green::before,
 h5.swirl.green::before,
 h6.swirl.green::before {
-  background-color: #0ceb9c;
+  background-color: #0CEB9C;
 }
 h1.swirl.cyan::before,
 h2.swirl.cyan::before,
@@ -143,7 +143,7 @@ h3.swirl.cyan::before,
 h4.swirl.cyan::before,
 h5.swirl.cyan::before,
 h6.swirl.cyan::before {
-  background-color: #00d4c5;
+  background-color: #00D4C5;
 }
 h1.swirl.white::before,
 h2.swirl.white::before,
@@ -151,7 +151,7 @@ h3.swirl.white::before,
 h4.swirl.white::before,
 h5.swirl.white::before,
 h6.swirl.white::before {
-  background-color: #faf8f5;
+  background-color: #FAF8F5;
 }
 h1.swirl.black::before,
 h2.swirl.black::before,
@@ -160,6 +160,22 @@ h4.swirl.black::before,
 h5.swirl.black::before,
 h6.swirl.black::before {
   background-color: #0f0f0f;
+}
+h1.swirl.apricot::before,
+h2.swirl.apricot::before,
+h3.swirl.apricot::before,
+h4.swirl.apricot::before,
+h5.swirl.apricot::before,
+h6.swirl.apricot::before {
+  background-color: #F39C99;
+}
+h1.swirl.pink::before,
+h2.swirl.pink::before,
+h3.swirl.pink::before,
+h4.swirl.pink::before,
+h5.swirl.pink::before,
+h6.swirl.pink::before {
+  background-color: #f763a0;
 }
 .header-container {
   text-align: center;
@@ -296,12 +312,12 @@ a {
 }
 header {
   position: absolute;
-  color: #faf8f5;
+  color: #FAF8F5;
 }
 .intro {
   min-height: 99vh;
-  background: #fbe067;
   position: relative;
+  background: #0b9ee1;
 }
 .intro .image {
   width: 200px;
@@ -317,6 +333,7 @@ header {
 .intro .text {
   width: 90%;
   width: 90vw;
+  color: #FAF8F5;
   font-size: 26px;
   font-weight: bold;
   line-height: 120%;
@@ -376,30 +393,39 @@ header {
   opacity: 0 !important;
   transform: translateY(20px);
 }
-.about {
-  background-color: #fe4b4d;
-  height: 90%;
-  height: 90vh;
-  color: #faf8f5;
-}
-.about div {
-  float: left;
-  width: 100%;
-}
-.about h6 {
-  text-align: left;
-  font-size: 1.2rem;
-}
 .about .image {
   width: 100%;
   height: 300px;
-  background-image: url("../img/macbook_gold.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 .about .about-text {
   width: 100%;
+}
+.about div {
+  float: left;
+  width: 100%;
+}
+.about h3 {
+  display: inline-block;
+}
+.about h6 {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 6%;
+  line-height: 140%;
+}
+@media only screen and (min-width: 40rem) {
+  .about h6 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .about h6 {
+    font-size: 1.4rem;
+  }
 }
 @media only screen and (min-width: 40rem) {
   .about {
@@ -417,8 +443,25 @@ header {
     flex: 2;
   }
 }
+.about-1 {
+  background-color: #0dc2e7;
+  height: 90%;
+  height: 90vh;
+}
+.about-1 .image {
+  background-image: url("../img/macbook_gold.png");
+}
+.about-2 {
+  margin-top: -10vh;
+  background-color: #0de7c4;
+  height: 90%;
+  height: 90vh;
+}
+.about-2 .image {
+  background-image: url("../img/test_emoji.svg");
+}
 .resume {
-  background-color: #0ceb9c;
+  background-color: #0CEB9C;
 }
 .resume h6 {
   font-size: 20px;
@@ -441,8 +484,12 @@ header {
   margin: 0 auto;
   white-space: nowrap;
 }
+.resume .positions * {
+  white-space: normal;
+}
 .resume .positions .position {
   display: inline-block;
+  position: relative;
   width: 80vw;
   height: 60vh;
   border: 5px solid #0f0f0f;
@@ -450,9 +497,21 @@ header {
   margin: 1vw;
   padding: 1vw;
 }
+.resume .positions .position img,
+.resume .positions .position object {
+  display: block;
+  max-width: 100%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resume .positions .position .text {
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+}
 .resume .positions .position h4 {
   display: inline-flex;
-  white-space: normal;
   font-size: 18px;
 }
 @media only screen and (min-width: 40rem) {
@@ -477,7 +536,7 @@ header {
   }
 }
 .projects {
-  background-color: #faf8f5;
+  background-color: #FAF8F5;
   padding-top: 10vh;
 }
 .post {
@@ -500,7 +559,12 @@ header {
   .post .post-body {
     padding: 0;
   }
-  .post .post-body p {
+  .post .post-body p,
+  .post .post-body h1,
+  .post .post-body h2,
+  .post .post-body h3,
+  .post .post-body h4,
+  .post .post-body h5 {
     padding-left: 50vw;
     max-width: calc(50vw + 600px);
   }
@@ -539,12 +603,209 @@ header {
 .post:last-child {
   border-bottom: 0px solid rgba(0, 0, 0, 0.2);
 }
-.contact {
-  background-color: #0f0f0f;
-  height: 60vh;
+.contacts {
+  overflow: hidden;
+  clear: both;
+}
+.contacts .contact-way {
+  display: block;
+  width: 50%;
+  padding-bottom: 50%;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  border-bottom: 0px;
+}
+.contacts .contact-way i {
+  font-size: 4rem;
+  overflow: visible;
+  display: inline-block;
+  position: absolute;
+  color: #fafafa;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(100%, 100%);
+  -moz-transform: translate(100%, 100%);
+  -ms-transform: translate(100%, 100%);
+  -o-transform: translate(100%, 100%);
+}
+.contacts .contact-way i:before {
+  margin: auto;
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+}
+.contacts .contact-way i:after {
+  display: inline-block;
+  position: absolute;
+  font-size: 2rem;
+  top: 32%;
+  left: 0;
+  white-space: nowrap;
+  font-weight: bold;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  -webkit-transform: scale(90%);
+  -moz-transform: scale(90%);
+  -ms-transform: scale(90%);
+  -o-transform: scale(90%);
+  -webkit-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+@media only screen and (min-width: 40rem) {
+  .contacts .contact-way {
+    width: 33.3333%;
+    padding-bottom: 33.3333%;
+  }
+  .contacts .contact-way i:after {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .contacts .contact-way {
+    width: 16.66666%;
+    padding-bottom: 16.66666%;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .contacts .contact-way i {
+    font-size: 6rem;
+  }
+  .contacts .contact-way i:after {
+    font-size: 1.5rem;
+  }
+}
+.contacts .contact-way .linkedin {
+  background: #0976B4;
+}
+.contacts .contact-way .linkedin i:after {
+  content: 'Viktor Gustafsson';
+}
+.contacts .contact-way .twitter {
+  background: #55ACEE;
+}
+.contacts .contact-way .twitter i:after {
+  content: '@viktorcarloskar';
+}
+.contacts .contact-way .instagram {
+  background: #3f729b;
+}
+.contacts .contact-way .instagram i:after {
+  content: '@viktorcarloskar';
+}
+.contacts .contact-way .github {
+  background: #E5E5E5;
+}
+.contacts .contact-way .github i {
+  color: #333333;
+}
+.contacts .contact-way .github i:after {
+  content: '@viktorcarloskar';
+}
+.contacts .contact-way .facebook {
+  background: #3B5998;
+}
+.contacts .contact-way .facebook i:after {
+  content: 'Viktor Gustafsson';
+}
+.contacts .contact-way .email {
+  background: #F7CA18;
+}
+.contacts .contact-way .email i:after {
+  content: 'viktor@vigu.se';
+}
+.contacts .contact-way:hover i:before {
+  -webkit-transform: translate(-50%, -70%);
+  -moz-transform: translate(-50%, -70%);
+  -ms-transform: translate(-50%, -70%);
+  -o-transform: translate(-50%, -70%);
+}
+.contacts .contact-way:hover i:after {
+  -webkit-transform: scale(100%);
+  -moz-transform: scale(100%);
+  -ms-transform: scale(100%);
+  -o-transform: scale(100%);
+  -webkit-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
+  -moz-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
+  -ms-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
+  -o-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.contacts .linkedin {
+  background: #0976B4;
+}
+.contacts .linkedin i:after {
+  content: 'Viktor Gustafsson';
+}
+.contacts .twitter {
+  background: #55ACEE;
+}
+.contacts .twitter i:after {
+  content: '@viktorcarloskar';
+}
+.contacts .instagram {
+  background: #3f729b;
+}
+.contacts .instagram i:after {
+  content: '@viktorcarloskar';
+}
+.contacts .github {
+  background: #E5E5E5;
+}
+.contacts .github i {
+  color: #333333;
+}
+.contacts .github i:after {
+  content: '@viktorcarloskar';
+}
+.contacts .facebook {
+  background: #3B5998;
+}
+.contacts .facebook i:after {
+  content: 'Viktor Gustafsson';
+}
+.contacts .email {
+  background: #F7CA18;
+}
+.contacts .email i:after {
+  content: 'viktor@vigu.se';
 }
 footer {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: #333;
+  color: #fafafa;
   font-size: 18px;
+}
+@media only screen and (min-width: 40rem) {
+  footer {
+    height: 8vh;
+  }
+}
+footer .content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 footer .icon {
   height: 18px;

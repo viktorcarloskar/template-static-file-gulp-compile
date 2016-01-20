@@ -6,7 +6,7 @@
     <div class="text">
       <span class="line">Hi! I'm Viktor. I do UI/UX stuff</span>
       <span class="line">with great technical knowledge.</span>
-      <!--<span class="line">A creative {{viktorsAge}} year old that do</span>-->
+      <!--<span class="line">A creative  year old that do</span>-->
     </div>
     <div class="available">
 
@@ -16,13 +16,22 @@
     </div>
   </div>
 </div>
-<div class="about part wrapper">
+<div class="about-1 about part wrapper">
   <div class="image">
 
   </div>
   <div class="about-text">
-    <h3 class="swirl">I love to develop using the latest technologies</h3>
-    <h6>My skills include everything from Node.Js, Angular.Js and CSS to Java, Photoshop and beerbrewing (currently brewing in my 25m2 student apartment)</h6>
+    <h3 class="swirl black">I love to develop using the latest technologies</h3>
+    <h6>My skills include everything from Node.Js, Angular.Js and CSS to Java, Photoshop and much more</h6>
+  </div>
+</div>
+<div class="about-2 about part wrapper">
+  <div class="about-text">
+    <h3 class="swirl pink">Profile</h3>
+    <h6>When I'm not fiddling around with technical stuff I love to cook, polish my boots, instagramming the latest fades of my jeans and enjoying other well designed goods. I deeply care about design and especially products that have a sustainable relationship with the world around us that instead of feeling worn out and out of date gains patina and become a natural part of people's life.</h6>
+  </div>
+  <div class="image">
+
   </div>
 </div>
 <div class="resume part">
@@ -32,7 +41,11 @@
   <div class="positions">
     {{#each content.positions}}
         <article class="position">
-          <h4>{{this.title}}</h4>
+          {{rightImageTag this.image}}
+          <div class="text">
+            <h4>{{this.title}}</h4>
+            <div>{{this.text}}</div>
+          </div>
         </article>
     {{/each}}
   </div>
@@ -53,6 +66,23 @@
       </article>
   {{/each}}
 </div>
-<div class="contact">
-  <a name="contact"></a>
+<div class="contacts">
+  <a class="contact-way linkedin" href="http://linkedin.com/in/viktorcarloskar">
+    <i class="fa fa-linkedin-square"></i>
+  </a>
+  <a class="contact-way twitter" href="http://twitter.com/viktorcarloskar">
+    <i class="fa fa-twitter-square"></i>
+  </a>
+  <a class="contact-way facebook" href="http://facebook.com/viktorcarloskar">
+    <i class="fa fa-facebook-square"></i>
+  </a>
+  <a class="contact-way instagram" href="http://instagram.com/viktorcarloskar">
+    <i class="fa fa-instagram"></i>
+  </a>
+  <a class="contact-way github" href="http://github.com/viktorcarloskar">
+    <i class="fa fa-github-square"></i>
+  </a>
+  <a class="contact-way email" href="mailto:viktor@vigu.se?subject=Hej Viktor!">
+    <i class="fa fa-envelope-o"></i>
+  </a>
 </div>

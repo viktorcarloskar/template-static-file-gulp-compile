@@ -1,6 +1,6 @@
 ---
 title: Team lead/developer of iOS/Android App for Uniaden
-image: http://40.media.tumblr.com/a2d503bd97bfac52fe44f8d896f6bbbe/tumblr_nn4f6jKGzN1stn28do1_1280.jpg
+image: img/uniaden-connect.svg
 text: Cool app
 link: uniaden.com
 ---
