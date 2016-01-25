@@ -483,26 +483,38 @@ header {
   overflow-y: hidden;
   margin: 0 auto;
   white-space: nowrap;
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 .resume .positions * {
   white-space: normal;
 }
 @media only screen and (min-width: 40rem) {
   .resume .positions {
-    display: flex;
-    align-items: stretch;
-    align-content: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
   }
 }
 .resume .positions .position {
-  display: inline-block;
+  display: flex;
+  align-items: stretch;
+  align-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   overflow-x: scroll;
   width: 86vw;
-  margin: 1vw;
-  padding: 1vw;
+  margin: 2vw;
+  padding: 4vw;
   border: 4px solid #0f0f0f;
   -webkit-border-radius: 11px;
   -moz-border-radius: 11px;
@@ -513,19 +525,17 @@ header {
 }
 @media only screen and (min-width: 40rem) {
   .resume .positions .position {
-    display: flex;
-    align-items: stretch;
-    align-content: flex-start;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     overflow-y: auto;
     width: 31vw;
+    margin: 1vw;
+    padding: 2vw;
   }
 }
 @media only screen and (min-width: 64rem) {
   .resume .positions .position {
     width: 23vw;
+    margin: 1vw;
+    padding: 1vw;
   }
 }
 .resume .positions .position .image {
