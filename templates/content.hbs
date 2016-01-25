@@ -41,7 +41,9 @@
   <div class="positions">
     {{#each content.positions}}
         <article class="position">
-          {{rightImageTag this.image}}
+          <div class="image">
+            {{rightImageTag this.image}}
+          </div>
           <div class="text">
             <h4>{{this.title}}</h4>
             <div>{{this.text}}</div>

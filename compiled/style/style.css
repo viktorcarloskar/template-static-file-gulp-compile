@@ -487,53 +487,68 @@ header {
 .resume .positions * {
   white-space: normal;
 }
-.resume .positions .position {
-  display: inline-block;
-  position: relative;
-  width: 80vw;
-  height: 60vh;
-  border: 5px solid #0f0f0f;
-  border-radius: 10px;
-  margin: 1vw;
-  padding: 1vw;
-}
-.resume .positions .position img,
-.resume .positions .position object {
-  display: block;
-  max-width: 100%;
-  max-height: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.resume .positions .position .text {
-  height: 30%;
-  position: absolute;
-  bottom: 0;
-}
-.resume .positions .position h4 {
-  display: inline-flex;
-  font-size: 18px;
-}
-@media only screen and (min-width: 40rem) {
-  .resume .positions .position h4 {
-    font-size: 20px;
-  }
-}
 @media only screen and (min-width: 40rem) {
   .resume .positions {
-    overflow: auto;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
+}
+.resume .positions .position {
+  display: inline-block;
+  overflow-x: scroll;
+  width: 86vw;
+  margin: 1vw;
+  padding: 1vw;
+  border: 4px solid #0f0f0f;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+@media only screen and (min-width: 40rem) {
   .resume .positions .position {
-    display: block;
-    float: left;
+    display: flex;
+    align-items: stretch;
+    align-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow-y: auto;
     width: 31vw;
-    height: 50vh;
   }
 }
 @media only screen and (min-width: 64rem) {
   .resume .positions .position {
     width: 23vw;
   }
+}
+.resume .positions .position .image {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-content: flex-start;
+}
+.resume .positions .position .image img,
+.resume .positions .position .image object {
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 40rem) {
+  .resume .positions .position .image {
+    height: 29vw;
+  }
+}
+.resume .positions .position h4 {
+  margin-bottom: 10px;
 }
 .projects {
   background-color: #FAF8F5;
@@ -804,6 +819,7 @@ footer {
 }
 footer .content {
   text-align: center;
+  line-height: 150%;
   margin-left: auto;
   margin-right: auto;
 }

@@ -11,7 +11,9 @@ module.exports = {
           "%": lvalue % rvalue
       }[operator];
     },
-
+    currentYear: function() {
+      return new Date().getFullYear();
+    },
     viktorsAge: function (text) {
         var birthday = new Date(1992, 3, 1);
         var today = new Date();
