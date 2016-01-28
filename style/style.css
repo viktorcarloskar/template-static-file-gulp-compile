@@ -334,13 +334,18 @@ header {
   width: 90%;
   width: 90vw;
   color: #FAF8F5;
-  font-size: 26px;
+  font-size: 21px;
   font-weight: bold;
   line-height: 120%;
 }
 @media only screen and (min-width: 40rem) {
   .intro .text {
-    font-size: 48px;
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 40rem) {
+  .intro .text {
+    font-size: 42px;
   }
 }
 .intro .text .line {
@@ -355,10 +360,10 @@ header {
   opacity: 1;
 }
 .intro .text .line:nth-child(1) {
-  transition-delay: 100ms;
+  transition-delay: 700ms;
 }
 .intro .text .line:nth-child(2) {
-  transition-delay: 300ms;
+  transition-delay: 1000ms;
 }
 .intro .scroll {
   width: 100%;
@@ -393,18 +398,56 @@ header {
   opacity: 0 !important;
   transform: translateY(20px);
 }
+.about {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  height: auto !important;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 40rem) {
+  .about {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .about {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .about .image {
-  width: 100%;
-  height: 300px;
+  padding-top: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 40rem) {
+  .about .image {
+    height: 100%;
+    padding-top: 0;
+  }
 }
 .about .about-text {
   width: 100%;
+  display: flex;
+  align-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .about div {
-  float: left;
   width: 100%;
 }
 .about h3 {
@@ -431,31 +474,22 @@ header {
   .about {
     height: 110vh;
   }
-  .about .image {
-    height: 500px;
-    -webkit-flex: 2;
-    -ms-flex: 2;
-    flex: 2;
-  }
-  .about .about-text {
-    -webkit-flex: 2;
-    -ms-flex: 2;
-    flex: 2;
-  }
 }
 .about-1 {
   background-color: #0dc2e7;
-  height: 90%;
-  height: 90vh;
 }
 .about-1 .image {
   background-image: url("../img/macbook_gold.png");
 }
 .about-2 {
-  margin-top: -10vh;
   background-color: #0de7c4;
-  height: 90%;
-  height: 90vh;
+  flex-direction: column-reverse;
+}
+@media only screen and (min-width: 40rem) {
+  .about-2 {
+    margin-top: -10vh;
+    flex-direction: row;
+  }
 }
 .about-2 .image {
   background-image: url("../img/test_emoji.svg");
@@ -516,6 +550,7 @@ header {
   margin: 2vw;
   padding: 4vw;
   border: 4px solid #0f0f0f;
+  flex-shrink: 0;
   -webkit-border-radius: 11px;
   -moz-border-radius: 11px;
   border-radius: 11px;
@@ -540,7 +575,7 @@ header {
 }
 .resume .positions .position .image {
   width: 100%;
-  height: 400px;
+  height: 300px;
   display: flex;
   align-content: flex-start;
 }
@@ -557,8 +592,38 @@ header {
     height: 29vw;
   }
 }
-.resume .positions .position h4 {
+@media only screen and (min-width: 90rem) {
+  .resume .positions .position .image {
+    height: 16vw;
+  }
+}
+.resume .positions .position .text {
+  font-size: 1.3rem;
+  line-height: 150%;
+}
+.resume .positions .position .text h4 {
   margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 40rem) {
+  .resume .positions .position .text h4 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .resume .positions .position .text h4 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 40rem) {
+  .resume .positions .position .text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .resume .positions .position .text {
+    font-size: 1.3rem;
+  }
 }
 .projects {
   background-color: #FAF8F5;
@@ -603,10 +668,10 @@ header {
     max-height: 90vw;
     padding: 0 2vw;
     opacity: 0;
-    -webkit-transition: opacity 200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-    -moz-transition: opacity 200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-    -ms-transition: opacity 200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-    -o-transition: opacity 200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+    -webkit-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+    -moz-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+    -ms-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+    -o-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   }
   .post img.fixed {
     position: fixed;
@@ -817,10 +882,11 @@ header {
 footer {
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 20vh;
   background-color: #333;
   color: #fafafa;
   font-size: 18px;
+  padding: 1vw;
 }
 @media only screen and (min-width: 40rem) {
   footer {
