@@ -115,7 +115,7 @@ h6.swirl::before {
   height: 14px;
   -webkit-mask-image: url("../img/swiwle.svg");
   mask-image: url("../img/swiwle.svg");
-  background-color: #ffec89;
+  background-color: #E5EC8B;
   background-repeat: repeat-x;
   position: absolute;
   margin-top: -18px;
@@ -476,13 +476,13 @@ header {
   }
 }
 .about-1 {
-  background-color: #0dc2e7;
+  background-color: #0CEB9C;
 }
 .about-1 .image {
   background-image: url("../img/macbook_gold.png");
 }
 .about-2 {
-  background-color: #0de7c4;
+  background-color: #E5EC8B;
   flex-direction: column-reverse;
 }
 @media only screen and (min-width: 40rem) {
@@ -492,7 +492,8 @@ header {
   }
 }
 .about-2 .image {
-  background-image: url("../img/test_emoji.svg");
+  background-size: 50%;
+  background-image: url("../img/taco_emoji.svg");
 }
 .resume {
   background-color: #0CEB9C;
