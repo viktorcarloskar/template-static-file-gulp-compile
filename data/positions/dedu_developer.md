@@ -1,8 +1,8 @@
 ---
 title: Web developer at DeDU since 2012
-image: http://40.media.tumblr.com/a2d503bd97bfac52fe44f8d896f6bbbe/tumblr_nn4f6jKGzN1stn28do1_1280.jpg
-text: Cool app
-link: uniaden.com
+image: img/humlegarden.svg
+text: Developer of the leading facility management system in Sweden. Mostly front-end and special customer orders.
+link: dedu.se
 ---
 Text
 
