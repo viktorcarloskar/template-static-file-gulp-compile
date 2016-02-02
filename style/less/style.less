@@ -93,13 +93,18 @@ header {
 	//-webkit-clip-path: circle(1000vh at 50vw -908vh);
 	//clip-path: circle(100px at center );
 	.image {
-		width: 400px;
-		height: 400px;
+		width: 200px;
+		height: 200px;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
-		background-image: url('../img/viktor_small.png');
+		background-image: url('../img/viktor.png');
 		display: block;
+
+		@media @tablet {
+			width: 400px;
+			height: 400px;
+		}
 		.center();
 	}
 	.text {
@@ -170,18 +175,22 @@ header {
 	}
 }
 .about {
-	display: flex;
-	align-items: stretch;
-	align-content: center;
+	.about-wrapper {
+		display: flex;
+		align-items: stretch;
+		align-content: center;
+		height: auto !important;
+		@media @bigdesktop {
+			width: 1440px;
+			.center();
+		}
+	}
 	height: auto !important;
 	.flex-wrap(wrap);
 	@media @tablet {
 		.flex-wrap(nowrap);
 	}
-	@media @bigdesktop {
-		width: 1440px;
-		.center();
-	}
+
 	.image {
 		width: 100%;
 		padding-top: 100%;
@@ -274,7 +283,7 @@ header {
 
 		display: flex;
 		align-items: stretch;
-		align-content: center;
+		//align-content: center;
 
 		.flex-wrap(nowrap);
 		flex-shrink: 0;
@@ -288,14 +297,12 @@ header {
 		.position {
 			display: flex;
 			align-items: stretch;
-			align-content:flex-start;
+			//align-content:flex-start;
 			.flex-wrap(wrap);
-			overflow-x: scroll;
 			width: 86vw;
 			margin: 2vw;
 			padding: 4vw;
 			border: 4px solid @color-black;
-			flex-shrink: 0;
 			.border-radius(11px);
 			@media @tablet {
 				overflow-y: auto;
@@ -312,7 +319,8 @@ header {
 				width: 100%;
 				height: 300px;
 				display: flex;
-				align-content:flex-start;
+				align-content:center;
+				align-self: flex-start;
 				img, object {
 					max-width: 100%;
 					max-height: 100%;
@@ -329,6 +337,7 @@ header {
 			.text {
 				font-size: 1.3rem;
 				line-height: 150%;
+				width: 100%;
 				h4 {
 					margin-bottom: 10px;
 					font-size: 1.5rem;
@@ -339,6 +348,18 @@ header {
 						font-size: 1.6rem;
 					}
 				}
+				@media @tablet {
+					font-size: 1.1rem;
+				}
+				@media @bigdesktop {
+					font-size: 1.3rem;
+				}
+			}
+			a {
+				display: block;
+				align-self: flex-end;
+				padding-top: 14px;
+				font-size: 1.3rem;
 				@media @tablet {
 					font-size: 1.1rem;
 				}

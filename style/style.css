@@ -320,15 +320,21 @@ header {
   background: #0b9ee1;
 }
 .intro .image {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url('../img/viktor_small.png');
+  background-image: url('../img/viktor.png');
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 40rem) {
+  .intro .image {
+    width: 400px;
+    height: 400px;
+  }
 }
 .intro .text {
   width: 90%;
@@ -399,26 +405,29 @@ header {
   transform: translateY(20px);
 }
 .about {
-  display: flex;
-  align-items: stretch;
-  align-content: center;
   height: auto !important;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.about .about-wrapper {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  height: auto !important;
+}
+@media only screen and (min-width: 90rem) {
+  .about .about-wrapper {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media only screen and (min-width: 40rem) {
   .about {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-  }
-}
-@media only screen and (min-width: 90rem) {
-  .about {
-    width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .about .image {
@@ -520,7 +529,6 @@ header {
   white-space: nowrap;
   display: flex;
   align-items: stretch;
-  align-content: center;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -542,16 +550,13 @@ header {
 .resume .positions .position {
   display: flex;
   align-items: stretch;
-  align-content: flex-start;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  overflow-x: scroll;
   width: 86vw;
   margin: 2vw;
   padding: 4vw;
   border: 4px solid #0f0f0f;
-  flex-shrink: 0;
   -webkit-border-radius: 11px;
   -moz-border-radius: 11px;
   border-radius: 11px;
@@ -578,7 +583,8 @@ header {
   width: 100%;
   height: 300px;
   display: flex;
-  align-content: flex-start;
+  align-content: center;
+  align-self: flex-start;
 }
 .resume .positions .position .image img,
 .resume .positions .position .image object {
@@ -601,6 +607,7 @@ header {
 .resume .positions .position .text {
   font-size: 1.3rem;
   line-height: 150%;
+  width: 100%;
 }
 .resume .positions .position .text h4 {
   margin-bottom: 10px;
@@ -623,6 +630,22 @@ header {
 }
 @media only screen and (min-width: 90rem) {
   .resume .positions .position .text {
+    font-size: 1.3rem;
+  }
+}
+.resume .positions .position a {
+  display: block;
+  align-self: flex-end;
+  padding-top: 14px;
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 40rem) {
+  .resume .positions .position a {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .resume .positions .position a {
     font-size: 1.3rem;
   }
 }
