@@ -1,5 +1,6 @@
 /* Cool colors */
 /* FONT IMPORT */
+/*
 @font-face {
   font-family: 'proxima_nova';
   src: url('../fonts/proximanova-regular-webfont.eot');
@@ -7,34 +8,59 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
+/*
 @font-face {
   font-family: 'proxima_nova';
   src: url('../fonts/proximanova-bold-webfont.eot');
-  src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova-bold-webfont.ttf') format('truetype'), url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+  src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/proximanova-bold-webfont.woff') format('woff'),
+       url('../fonts/proximanova-bold-webfont.ttf') format('truetype'),
+       url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'proxima_nova';
   src: url('../fonts/proximanova-lightitalic-webfont.eot');
-  src: url('../fonts/proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-lightitalic-webfont.woff') format('woff'), url('../fonts/proximanova-lightitalic-webfont.ttf') format('truetype'), url('../fonts/proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
+  src: url('../fonts/proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/proximanova-lightitalic-webfont.woff') format('woff'),
+       url('../fonts/proximanova-lightitalic-webfont.ttf') format('truetype'),
+       url('../fonts/proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
-  font-family: 'proxima_nova';
-  src: url('../fonts/proximanova-light-webfont.eot');
-  src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-light-webfont.woff') format('woff'), url('../fonts/proximanova-light-webfont.ttf') format('truetype'), url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
-  font-weight: 200;
-  font-style: normal;
+    font-family: 'proxima_nova';
+    src: url('../fonts/proximanova-light-webfont.eot');
+    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-light-webfont.woff') format('woff'),
+         url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: 200;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'proxima_nova';
-  src: url('../fonts/proxima_nova_thin-webfont.eot');
-  src: url('../fonts/proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_thin-webfont.woff') format('woff'), url('../fonts/proxima_nova_thin-webfont.ttf') format('truetype'), url('../fonts/proxima_nova_thin-webfont.svg#proxima_novathin') format('svg');
-  font-weight: 100;
-  font-style: normal;
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima_nova_thin-webfont.eot');
+    src: url('../fonts/proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima_nova_thin-webfont.woff') format('woff'),
+         url('../fonts/proxima_nova_thin-webfont.ttf') format('truetype'),
+         url('../fonts/proxima_nova_thin-webfont.svg#proxima_novathin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}*/
+/*
+@font-face {
+    font-family: 'blokk';
+    src: url('fonts/blokk/BLOKKNeue-Regular.eot');
+    src: url('fonts/blokk/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/blokk/BLOKKNeue-Regular.woff') format('woff'),
+         url('fonts/blokk/BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+*/
 *,
 *:before,
 *:after {
@@ -327,6 +353,12 @@ header {
   background-size: contain;
   background-image: url('../img/viktor.png');
   display: block;
+  -webkit-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition-delay: 600ms;
+  opacity: 1;
   margin-left: auto;
   margin-right: auto;
 }
@@ -359,17 +391,28 @@ header {
   white-space: pre-wrap;
   width: 100%;
   text-align: center;
+}
+.intro .text .line .hi {
+  display: inline-block;
   -webkit-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -moz-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -ms-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -o-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition-delay: 400ms;
+}
+.intro .text .line .reveal {
+  -webkit-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition-delay: 700ms;
   opacity: 1;
 }
-.intro .text .line:nth-child(1) {
-  transition-delay: 700ms;
+.intro .text .line:nth-child(1) .reveal {
+  transition-delay: 1200ms;
 }
-.intro .text .line:nth-child(2) {
-  transition-delay: 1000ms;
+.intro .text .line:nth-child(2) .reveal {
+  transition-delay: 1800ms;
 }
 .intro .scroll {
   width: 100%;
@@ -396,7 +439,21 @@ header {
 		}*/
   }
 }
-.preload .line {
+.preload .intro .image {
+  opacity: 0;
+}
+.preload .line .hi {
+  transform: translateX(140px);
+}
+@media only screen and (min-width: 40rem) {
+  .preload .line .hi {
+    transform: translateX(292px);
+  }
+}
+.preload .line .visible {
+  opacity: 1;
+}
+.preload .line .reveal {
   opacity: 0 !important;
   transform: translateY(20px);
 }
@@ -406,28 +463,28 @@ header {
 }
 .about {
   height: auto !important;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .about .about-wrapper {
   display: flex;
   align-items: stretch;
   align-content: center;
   height: auto !important;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 40rem) {
+  .about .about-wrapper {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
 }
 @media only screen and (min-width: 90rem) {
   .about .about-wrapper {
     width: 1440px;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-@media only screen and (min-width: 40rem) {
-  .about {
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
   }
 }
 .about .image {
@@ -461,6 +518,7 @@ header {
 }
 .about h3 {
   display: inline-block;
+  margin-bottom: 10px;
 }
 .about h6 {
   text-align: left;
@@ -468,6 +526,10 @@ header {
   margin-top: 0;
   margin-bottom: 6%;
   line-height: 140%;
+}
+.about h6 p {
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #0f0f0f;
 }
 @media only screen and (min-width: 40rem) {
   .about h6 {
@@ -492,10 +554,12 @@ header {
 }
 .about-2 {
   background-color: #E5EC8B;
+}
+.about-2 .about-wrapper {
   flex-direction: column-reverse;
 }
 @media only screen and (min-width: 40rem) {
-  .about-2 {
+  .about-2 .about-wrapper {
     margin-top: -10vh;
     flex-direction: row;
   }
@@ -533,6 +597,9 @@ header {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   flex-shrink: 0;
+  flex-basis: auto;
+  /* default value */
+  min-width: 300px;
 }
 .resume .positions * {
   white-space: normal;
@@ -574,9 +641,13 @@ header {
 }
 @media only screen and (min-width: 64rem) {
   .resume .positions .position {
-    width: 23vw;
     margin: 1vw;
     padding: 1vw;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .resume .positions .position {
+    width: 23vw;
   }
 }
 .resume .positions .position .image {
@@ -608,6 +679,14 @@ header {
   font-size: 1.3rem;
   line-height: 150%;
   width: 100%;
+  flex-basis: auto;
+  /* default value */
+  min-width: 300px;
+}
+@media only screen and (min-width: 40rem) {
+  .resume .positions .position .text {
+    min-width: auto;
+  }
 }
 .resume .positions .position .text h4 {
   margin-bottom: 10px;

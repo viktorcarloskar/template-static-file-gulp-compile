@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="659px" height="445px" viewBox="10 0 659 445" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <style>
+    .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 2000;
+        animation: dash 10s linear infinite;
+      }
+      @-webkit-keyframes dash {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @-moz-keyframes dash {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @-o-keyframes dash {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes dash {
+        0%   {stroke-dashoffset: 2000;}
+        15%  {stroke-dashoffset: 0;}
+        100% {stroke-dashoffset: 0;}
+      }
+      .hidden {
+        opacity: 0;
+      }
+    </style>
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Base" sketch:type="MSLayerGroup" transform="translate(5.000000, 13.000000)" fill="#0F0F0F">
+            <g id="Basic-shape" transform="translate(20.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-2" x="6" y="0" width="6" height="410" rx="3"></rect>
+                <rect id="Rectangle-2" transform="translate(314.500000, 401.500000) rotate(-270.000000) translate(-314.500000, -401.500000) " x="311.5" y="87.5" width="6" height="628" rx="3"></rect>
+            </g>
+            <g id="Notches-X" transform="translate(75.000000, 391.000000)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-3" x="0" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="50" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="100" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="150" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="200" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="250" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="300" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="350" y="0" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="400" y="0" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="450" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="500" y="1" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3-Copy" x="550" y="1" width="6" height="20" rx="3"></rect>
+            </g>
+            <g id="Notches-Y" transform="translate(19.000000, 45.000000)" sketch:type="MSShapeGroup">
+                <rect id="Rectangle-3" transform="translate(10.000000, 287.000000) rotate(-90.000000) translate(-10.000000, -287.000000) " x="7" y="277" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3" transform="translate(10.000000, 218.000000) rotate(-90.000000) translate(-10.000000, -218.000000) " x="7" y="208" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3" transform="translate(10.000000, 148.000000) rotate(-90.000000) translate(-10.000000, -148.000000) " x="7" y="138" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3" transform="translate(10.000000, 79.000000) rotate(-90.000000) translate(-10.000000, -79.000000) " x="7" y="69" width="6" height="20" rx="3"></rect>
+                <rect id="Rectangle-3" transform="translate(10.000000, 9.000000) rotate(-90.000000) translate(-10.000000, -9.000000) " x="7" y="-1" width="6" height="20" rx="3"></rect>
+            </g>
+            <text id="kWh" sketch:type="MSTextLayer" transform="translate(8.500000, 192.500000) rotate(-90.000000) translate(-8.500000, -192.500000) " font-family="Montserrat" font-size="14" font-weight="bold" sketch:alignment="middle" letter-spacing="0.135483831">
+                <tspan x="-8.23935856" y="198">kWh</tspan>
+            </text>
+        </g>
+        <path class="path" d="M83.3989858,60 C83.3989858,60 91.0552655,68.170179 100.4992,78.2480021 L117.439473,96.3253284 C126.88366,106.403422 142.553547,122.394594 152.432964,132.036578 L167.046307,146.298718 C176.928491,155.943403 190.833153,173.277177 198.099755,185.009161 L224.267028,227.256419 C231.53519,238.990921 246.44591,255.127079 257.57767,263.302397 L268.799057,271.543538 C279.927854,279.71668 298.848061,291.577987 311.041353,298.027429 L318.994558,302.234146 C331.195536,308.687653 352.287872,314.041042 366.075476,314.190948 L367.428805,314.205662 C381.229899,314.355714 403.610332,314.524082 417.427475,314.581767 L419.806142,314.591698 C433.61855,314.649362 454.902468,309.849032 467.344229,303.870281 L472.280226,301.498341 C484.722378,295.519402 501.224527,281.510582 509.150674,270.191818 L533.111553,235.975003 C541.032387,224.663827 553.392214,205.997124 560.710347,194.29399 L584.778929,155.803594 C592.100488,144.094982 605.66515,126.41841 615.086776,116.310786 L632.78492,97.3240244" id="Energy" stroke="#0F0F0F" stroke-width="6" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

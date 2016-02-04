@@ -100,6 +100,9 @@ header {
 		background-size: contain;
 		background-image: url('../img/viktor.png');
 		display: block;
+		.transition(all 600ms @cool-bezier);
+		transition-delay: 600ms;
+		opacity: 1;
 
 		@media @tablet {
 			width: 400px;
@@ -130,14 +133,22 @@ header {
 			width: 100%;
 			text-align: center;
 			//margin: 0 4px;
-			.transition(all 600ms @cool-bezier);
-			opacity: 1;
+			.hi {
+				display: inline-block;
+				.transition(all 600ms @cool-bezier);
+				transition-delay: 400ms;
+			}
+			.reveal {
+				.transition(all 600ms @cool-bezier);
+				transition-delay: 700ms;
+				opacity: 1;
+			}
 		}
-		.line:nth-child(1) {
-			transition-delay: 700ms;
+		.line:nth-child(1) .reveal {
+			transition-delay: 1200ms;
 		}
-		.line:nth-child(2) {
-			transition-delay: 1000ms;
+		.line:nth-child(2) .reveal {
+			transition-delay: 1800ms;
 		}
 		.name {
 			//color: @color-vintage-white;
@@ -165,9 +176,23 @@ header {
 	}
 }
 .preload {
+	.intro .image {
+		opacity: 0;
+	}
 	.line {
-		opacity: 0 !important;
-		transform: translateY(20px);
+		.hi {
+			transform: translateX(140px);
+			@media @tablet {
+				transform:translateX(292px);
+			}
+		}
+		.visible {
+			opacity: 1;
+		}
+		.reveal {
+			opacity: 0 !important;
+			transform: translateY(20px);
+		}
 	}
 	.scroll {
 		opacity: 0 !important;
@@ -180,16 +205,16 @@ header {
 		align-items: stretch;
 		align-content: center;
 		height: auto !important;
+		.flex-wrap(wrap);
+		@media @tablet {
+			.flex-wrap(nowrap);
+		}
 		@media @bigdesktop {
 			width: 1440px;
 			.center();
 		}
 	}
 	height: auto !important;
-	.flex-wrap(wrap);
-	@media @tablet {
-		.flex-wrap(nowrap);
-	}
 
 	.image {
 		width: 100%;
@@ -218,6 +243,7 @@ header {
 	}
 	h3 {
 		display: inline-block;
+		margin-bottom: 10px;
 		//margin-bottom: 0;
 	}
 	h6 {
@@ -226,6 +252,10 @@ header {
 		margin-top: 0;
 		margin-bottom: 6%;
 		line-height: 140%;
+		p {
+			font-family: @std-font;
+			color: @color-black;
+		}
 		@media @tablet {
 			font-size: 1.6rem;
 		}
@@ -247,10 +277,12 @@ header {
 .about-2 {
 	//background-color: @color-grad-2;
 	background-color: @color-cute-yellow;
-	flex-direction: column-reverse;
-	@media @tablet {
-		margin-top: -10vh;
-		flex-direction: row;
+	.about-wrapper {
+		flex-direction: column-reverse;
+		@media @tablet {
+			margin-top: -10vh;
+			flex-direction: row;
+		}
 	}
 	.image {
 			background-size: 50%;
@@ -280,13 +312,14 @@ header {
     overflow-y: hidden;
     margin: 0 auto;
     white-space: nowrap;
-
 		display: flex;
 		align-items: stretch;
 		//align-content: center;
 
 		.flex-wrap(nowrap);
 		flex-shrink: 0;
+		flex-basis: auto; /* default value */
+		min-width: 300px;
 		* {
 			white-space: normal;
 		}
@@ -311,9 +344,11 @@ header {
 				padding: 2vw;
 			}
 			@media @desktop {
-				width: 23vw;
 				margin: 1vw;
 				padding: 1vw;
+			}
+			@media @bigdesktop {
+				width: 23vw;
 			}
 			.image {
 				width: 100%;
@@ -338,6 +373,11 @@ header {
 				font-size: 1.3rem;
 				line-height: 150%;
 				width: 100%;
+				flex-basis: auto; /* default value */
+				min-width: 300px;
+				@media @tablet {
+					min-width: auto;
+				}
 				h4 {
 					margin-bottom: 10px;
 					font-size: 1.5rem;
