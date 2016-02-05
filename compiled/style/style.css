@@ -372,13 +372,13 @@ header {
   width: 90%;
   width: 90vw;
   color: #FAF8F5;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 120%;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (max-width: 22rem) {
   .intro .text {
-    font-size: 34px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 40rem) {
@@ -444,6 +444,11 @@ header {
 }
 .preload .line .hi {
   transform: translateX(140px);
+}
+@media only screen and (max-width: 22rem) {
+  .preload .line .hi {
+    transform: translateX(100px);
+  }
 }
 @media only screen and (min-width: 40rem) {
   .preload .line .hi {
