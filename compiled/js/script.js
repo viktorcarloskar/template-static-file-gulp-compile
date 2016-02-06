@@ -3,6 +3,14 @@ var parts = new Array();
 var body;
 
 function init() {
+  body = document.querySelector("body");
+
+  setScrollValues();
+
+  body.classList.remove("preload");
+}
+
+function setScrollValues() {
   images = document.querySelectorAll('.post img')
   var posts = document.querySelectorAll('.post-body')
   // Do this on scroll as well
@@ -15,16 +23,12 @@ function init() {
   // For color blending on scroll
   parts = document.querySelectorAll('.part');
   setStickyValues(parts);
+  setColorValues(parts, false, true);
   setColorValues(parts, true);
 
   var initScrollEvent = new Event("optimizedScroll")
-  window.dispatchEvent(initScrollEvent);
-
-  body = document.querySelector("body");
-
-  body.classList.remove("preload");
+  calculatePageAttr();
 }
-
 // Mozilla throttle approach to events
 // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
 ;(function() {
@@ -44,13 +48,21 @@ function init() {
 
     /* init - you can init any event */
     throttle ("scroll", "optimizedScroll");
+    throttle("resize", "optimizedResize");
 })();
 
 // handle event
 window.addEventListener("optimizedScroll", function() {
+  calculatePageAttr();
+});
+window.addEventListener("optimizedResize", function() {
+  setScrollValues();
+});
+
+function calculatePageAttr() {
   calculateImageState();
   calculateBackgroundColor();
-});
+}
 
 function calculateImageState() {
   var scrolledTop = getScrolledLength()
@@ -256,11 +268,16 @@ function setStickyImageValues(images) {
   }
 }
 
-function setColorValues(objects, setTransparent) {
+function setColorValues(objects, setTransparent, resetColor) {
   for (var i = 0; i < objects.length; i++) {
-    objects[i].setAttribute('data-background-color', rgbToHex(getBackgroundColor(objects[i])));
-    if (setTransparent) {
-      setBackgroundColor(objects[i], "transparent");
+    if (resetColor) {
+      setBackgroundColor(objects[i], objects[i].dataset.backgroundColor);
+    }
+    else{
+      objects[i].setAttribute('data-background-color', rgbToHex(getBackgroundColor(objects[i])));
+      if (setTransparent) {
+        setBackgroundColor(objects[i], "transparent");
+      }
     }
   }
 }
@@ -289,8 +306,10 @@ function getWindowHeight() {
 function setBackgroundColor(element, color) {
   if (color === "transparent")
     element.style.backgroundColor = color;
-  else
+  else if (color)
     element.style.backgroundColor = "#" + color;
+  else
+    element.style.backgroundColor = "";
 }
 function getBackgroundColor(element) {
   return element.style.backgroundColor ? element.style.backgroundColor : element.style.background || window.getComputedStyle(element, null).getPropertyValue("background-color");
