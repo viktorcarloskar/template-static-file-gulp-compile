@@ -692,7 +692,6 @@ header {
   width: 100%;
   flex-basis: auto;
   /* default value */
-  min-width: 82vw;
 }
 @media only screen and (max-width: 22rem) {
   .resume .positions .position .text {
