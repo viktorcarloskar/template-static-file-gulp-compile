@@ -100,7 +100,7 @@ header {
 		background-size: contain;
 		background-image: url('../img/viktor.png');
 		display: block;
-		.transition(all 600ms @cool-bezier);
+		.transition(~"opacity 600ms, transform 600ms, -webkit-transform 600ms"  @cool-bezier);
 		transition-delay: 600ms;
 		opacity: 1;
 
@@ -139,11 +139,11 @@ header {
 			//margin: 0 4px;
 			.hi {
 				display: inline-block;
-				.transition(all 600ms @cool-bezier);
+				.transition(~"opacity 600ms, transform 600ms, -webkit-transform 600ms"  @cool-bezier);
 				transition-delay: 400ms;
 			}
 			.reveal {
-				.transition(all 600ms @cool-bezier);
+				.transition(~"opacity 600ms, transform 600ms, -webkit-transform 600ms"  @cool-bezier);
 				transition-delay: 700ms;
 				opacity: 1;
 			}
@@ -163,7 +163,7 @@ header {
 		position: absolute;
 		bottom: 30px;
 		left: 0;
-		.transition(all 1200ms @cool-bezier);
+		.transition(~"opacity 1200ms, transform 1200ms, -webkit-transform 1200ms"  @cool-bezier);
 		transition-delay: 1500ms;
 		img {
 			display: block;
