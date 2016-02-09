@@ -1,66 +1,4 @@
 /* Cool colors */
-/* FONT IMPORT */
-/*
-@font-face {
-  font-family: 'proxima_nova';
-  src: url('../fonts/proximanova-regular-webfont.eot');
-  src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova-regular-webfont.ttf') format('truetype'), url('../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
-/*
-@font-face {
-  font-family: 'proxima_nova';
-  src: url('../fonts/proximanova-bold-webfont.eot');
-  src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proximanova-bold-webfont.woff') format('woff'),
-       url('../fonts/proximanova-bold-webfont.ttf') format('truetype'),
-       url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'proxima_nova';
-  src: url('../fonts/proximanova-lightitalic-webfont.eot');
-  src: url('../fonts/proximanova-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/proximanova-lightitalic-webfont.woff') format('woff'),
-       url('../fonts/proximanova-lightitalic-webfont.ttf') format('truetype'),
-       url('../fonts/proximanova-lightitalic-webfont.svg#proxima_novalight_italic') format('svg');
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-    font-family: 'proxima_nova';
-    src: url('../fonts/proximanova-light-webfont.eot');
-    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proximanova-light-webfont.woff') format('woff'),
-         url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
-         url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
-    font-weight: 200;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'proxima_nova';
-    src: url('../fonts/proxima_nova_thin-webfont.eot');
-    src: url('../fonts/proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/proxima_nova_thin-webfont.woff') format('woff'),
-         url('../fonts/proxima_nova_thin-webfont.ttf') format('truetype'),
-         url('../fonts/proxima_nova_thin-webfont.svg#proxima_novathin') format('svg');
-    font-weight: 100;
-    font-style: normal;
-}*/
-/*
-@font-face {
-    font-family: 'blokk';
-    src: url('fonts/blokk/BLOKKNeue-Regular.eot');
-    src: url('fonts/blokk/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
-         url('fonts/blokk/BLOKKNeue-Regular.woff') format('woff'),
-         url('fonts/blokk/BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-*/
 *,
 *:before,
 *:after {
@@ -353,10 +291,11 @@ header {
   background-size: contain;
   background-image: url('../img/viktor.png');
   display: block;
-  -webkit-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -moz-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -ms-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -o-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -webkit-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   transition-delay: 600ms;
   opacity: 1;
   margin-left: auto;
@@ -400,17 +339,19 @@ header {
 }
 .intro .text .line .hi {
   display: inline-block;
-  -webkit-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -moz-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -ms-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -o-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -webkit-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   transition-delay: 400ms;
 }
 .intro .text .line .reveal {
-  -webkit-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -moz-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -ms-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -o-transition: all 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -webkit-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   transition-delay: 700ms;
   opacity: 1;
 }
@@ -425,10 +366,11 @@ header {
   position: absolute;
   bottom: 30px;
   left: 0;
-  -webkit-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -moz-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -ms-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
-  -o-transition: all 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -webkit-transition: opacity 1200ms, transform 1200ms, -webkit-transform 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -moz-transition: opacity 1200ms, transform 1200ms, -webkit-transform 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -ms-transition: opacity 1200ms, transform 1200ms, -webkit-transform 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  -o-transition: opacity 1200ms, transform 1200ms, -webkit-transform 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition: opacity 1200ms, transform 1200ms, -webkit-transform 1200ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   transition-delay: 1500ms;
 }
 .intro .scroll img {
@@ -796,6 +738,7 @@ header {
     -moz-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
     -ms-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
     -o-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
+    transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);
   }
   .post img.fixed {
     position: fixed;
@@ -846,6 +789,7 @@ header {
   -moz-transform: translate(100%, 100%);
   -ms-transform: translate(100%, 100%);
   -o-transform: translate(100%, 100%);
+  transform: translate(100%, 100%);
 }
 .contacts .contact-way i:before {
   margin: auto;
@@ -854,10 +798,12 @@ header {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -moz-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -ms-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -o-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
 }
 .contacts .contact-way i:after {
   display: inline-block;
@@ -871,14 +817,17 @@ header {
   -moz-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
   -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   -webkit-transform: scale(90%);
   -moz-transform: scale(90%);
   -ms-transform: scale(90%);
   -o-transform: scale(90%);
+  transform: scale(90%);
   -webkit-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -moz-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -ms-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -o-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
+  transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875);
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
@@ -950,16 +899,19 @@ header {
   -moz-transform: translate(-50%, -70%);
   -ms-transform: translate(-50%, -70%);
   -o-transform: translate(-50%, -70%);
+  transform: translate(-50%, -70%);
 }
 .contacts .contact-way:hover i:after {
   -webkit-transform: scale(100%);
   -moz-transform: scale(100%);
   -ms-transform: scale(100%);
   -o-transform: scale(100%);
+  transform: scale(100%);
   -webkit-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
   -moz-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
   -ms-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
   -o-transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
+  transition: all 0.4s cubic-bezier(0.625, 0.125, 0.305, 0.875) 0.2s;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
