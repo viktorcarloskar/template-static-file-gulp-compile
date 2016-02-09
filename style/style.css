@@ -576,8 +576,14 @@ header {
   }
 }
 .about-2 .image {
-  background-size: 50%;
-  background-image: url("../img/taco_emoji.svg");
+  background-size: 60%;
+  background-image: url("../img/tacoburger.svg");
+}
+.about-3 {
+  background-color: #0CEB9C;
+}
+.about-3 .image {
+  background-image: url("../img/delorean.svg");
 }
 .resume {
   background-color: #0CEB9C;

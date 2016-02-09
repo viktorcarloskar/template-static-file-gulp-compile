@@ -1,7 +1,7 @@
 ---
-title: Head of IT for Uniaden
-image: http://40.media.tumblr.com/a2d503bd97bfac52fe44f8d896f6bbbe/tumblr_nn4f6jKGzN1stn28do1_1280.jpg
-text: Cool app
+title: Head of IT for Uniaden 2015
+image: img/uniaden-it.svg
+text: Uniaden is the largest job fair for students in northern Sweden and I had the opportunity to be in charge over everything involving IT. 
 link: uniaden.com
 ---
 Text
