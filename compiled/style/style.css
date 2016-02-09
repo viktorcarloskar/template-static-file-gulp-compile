@@ -39,7 +39,7 @@ body {
   height: 100vh;
   padding: 0 4%;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .wrapper {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -153,7 +153,7 @@ h6.swirl.pink::before {
   text-align: center;
   display: inline-block;
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   .container {
     padding: 0 2%;
   }
@@ -227,12 +227,12 @@ html {
   height: 100%;
   line-height: 150%;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   html {
     font-size: 90%;
   }
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   html {
     font-size: 100%;
   }
@@ -248,7 +248,7 @@ body {
   padding: 0 3%;
   position: relative;
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   .container {
     padding: 0 2%;
   }
@@ -301,13 +301,13 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .intro .image {
     width: 400px;
     height: 400px;
   }
 }
-@media only screen and (min-width: 40rem) and (max-height: 20rem) {
+@media only screen and (min-width: 640px) and (max-height: 321px) {
   .intro .image {
     width: 300px;
     height: 300px;
@@ -321,12 +321,12 @@ header {
   font-weight: bold;
   line-height: 120%;
 }
-@media only screen and (max-width: 22rem) {
+@media only screen and (max-width: 321px) {
   .intro .text {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .intro .text {
     font-size: 42px;
   }
@@ -379,7 +379,7 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .intro {
     /*.text {
 			width: 50%;
@@ -393,12 +393,12 @@ header {
 .preload .line .hi {
   transform: translateX(140px);
 }
-@media only screen and (max-width: 22rem) {
+@media only screen and (max-width: 321px) {
   .preload .line .hi {
     transform: translateX(100px);
   }
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .preload .line .hi {
     transform: translateX(292px);
   }
@@ -426,14 +426,14 @@ header {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .about .about-wrapper {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .about .about-wrapper {
     width: 1440px;
     margin-left: auto;
@@ -452,7 +452,7 @@ header {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .about .image {
     height: 100%;
     padding-top: 0;
@@ -484,17 +484,17 @@ header {
   font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #0f0f0f;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .about h6 {
     font-size: 1.6rem;
   }
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   .about h6 {
     font-size: 1.4rem;
   }
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .about {
     height: 110vh;
   }
@@ -511,7 +511,7 @@ header {
 .about-2 .about-wrapper {
   flex-direction: column-reverse;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .about-2 .about-wrapper {
     margin-top: -10vh;
     flex-direction: row;
@@ -527,7 +527,7 @@ header {
 .about-3 .image {
   background-image: url("../img/delorean.svg");
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .about-3 .image {
     margin-left: 40px;
   }
@@ -538,13 +538,13 @@ header {
 .resume h6 {
   font-size: 20px;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume h6 {
     width: 80%;
     font-size: 24px;
   }
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   .resume h6 {
     width: 50%;
   }
@@ -567,7 +567,7 @@ header {
 .resume .positions * {
   white-space: normal;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -594,7 +594,7 @@ header {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions .position {
     min-width: auto;
     overflow-y: auto;
@@ -603,13 +603,13 @@ header {
     padding: 2vw;
   }
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   .resume .positions .position {
     margin: 1vw;
     padding: 1vw;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .resume .positions .position {
     width: 23vw;
   }
@@ -629,12 +629,12 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions .position .image {
     height: 29vw;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .resume .positions .position .image {
     height: 16vw;
   }
@@ -646,12 +646,12 @@ header {
   flex-basis: auto;
   /* default value */
 }
-@media only screen and (max-width: 22rem) {
+@media only screen and (max-width: 321px) {
   .resume .positions .position .text {
     min-width: 275px;
   }
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions .position .text {
     min-width: auto;
   }
@@ -660,22 +660,22 @@ header {
   margin-bottom: 10px;
   font-size: 1.5rem;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions .position .text h4 {
     font-size: 1.2rem;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .resume .positions .position .text h4 {
     font-size: 1.6rem;
   }
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions .position .text {
     font-size: 1.1rem;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .resume .positions .position .text {
     font-size: 1.3rem;
   }
@@ -686,12 +686,12 @@ header {
   padding-top: 14px;
   font-size: 1.3rem;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .resume .positions .position a {
     font-size: 1.1rem;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .resume .positions .position a {
     font-size: 1.3rem;
   }
@@ -716,7 +716,7 @@ header {
   width: 95%;
   max-width: 800px;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .post .post-body {
     padding: 0;
   }
@@ -757,7 +757,7 @@ header {
     opacity: 1;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .post img {
     left: calc((100vw - 1200px )/2);
   }
@@ -837,7 +837,7 @@ header {
   -moz-opacity: 0;
   opacity: 0;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   .contacts .contact-way {
     width: 33.3333%;
     padding-bottom: 33.3333%;
@@ -846,13 +846,13 @@ header {
     font-size: 1.4rem;
   }
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1024px) {
   .contacts .contact-way {
     width: 16.66666%;
     padding-bottom: 16.66666%;
   }
 }
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 1440px) {
   .contacts .contact-way i {
     font-size: 6rem;
   }
@@ -969,7 +969,7 @@ footer {
   font-size: 18px;
   padding: 1vw;
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 640px) {
   footer {
     height: 8vh;
   }
