@@ -629,6 +629,11 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+@media only screen and (max-width: 321px) {
+  .resume .positions .position .image {
+    height: 200px;
+  }
+}
 @media only screen and (min-width: 640px) {
   .resume .positions .position .image {
     height: 29vw;
@@ -645,11 +650,6 @@ header {
   width: 100%;
   flex-basis: auto;
   /* default value */
-}
-@media only screen and (max-width: 321px) {
-  .resume .positions .position .text {
-    min-width: 275px;
-  }
 }
 @media only screen and (min-width: 640px) {
   .resume .positions .position .text {
