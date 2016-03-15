@@ -551,6 +551,7 @@ header {
 }
 .resume .positions {
   width: 100vw;
+  max-width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   margin: 0 auto;
@@ -597,22 +598,22 @@ header {
 }
 @media only screen and (min-width: 640px) {
   .resume .positions .position {
-    min-width: auto;
+    min-width: 0;
     overflow-y: auto;
-    width: 31vw;
-    margin: 1vw;
-    padding: 2vw;
+    width: 31%;
+    margin: 1%;
+    padding: 2%;
   }
 }
 @media only screen and (min-width: 1024px) {
   .resume .positions .position {
-    margin: 1vw;
-    padding: 1vw;
+    margin: 1%;
+    padding: 1%;
   }
 }
 @media only screen and (min-width: 1440px) {
   .resume .positions .position {
-    width: 23vw;
+    width: 23%;
   }
 }
 .resume .positions .position .image {
@@ -710,7 +711,8 @@ header {
   padding: 2vw;
 }
 .post img {
-  max-width: 96vw;
+  max-width: 96%;
+  margin: 5% 2%;
 }
 .post h1 {
   margin: 5vh auto 2vh auto;
@@ -738,6 +740,7 @@ header {
     width: 50vw;
     max-width: 600px;
     max-height: 90vw;
+    margin: 0;
     padding: 0 2vw;
     opacity: 0;
     -webkit-transition: opacity 400ms cubic-bezier(0.625, 0.125, 0.305, 0.875);

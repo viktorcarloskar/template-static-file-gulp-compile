@@ -325,6 +325,7 @@ header {
 	}
 	.positions {
 		width: 100vw;
+		max-width: 100%;
 		overflow-x: scroll;
     overflow-y: hidden;
     margin: 0 auto;
@@ -355,18 +356,18 @@ header {
 			border: 4px solid @color-black;
 			.border-radius(11px);
 			@media @tablet {
-				min-width: auto;
+				min-width: 0;
 				overflow-y: auto;
-				width: 31vw;
-				margin: 1vw;
-				padding: 2vw;
+				width: 31%;
+				margin: 1%;
+				padding: 2%;
 			}
 			@media @desktop {
-				margin: 1vw;
-				padding: 1vw;
+				margin: 1%;
+				padding: 1%;
 			}
 			@media @bigdesktop {
-				width: 23vw;
+				width: 23%;
 			}
 			.image {
 				width: 100%;
@@ -444,7 +445,8 @@ header {
 		padding: 2vw;
 	}
 	img {
-		max-width: 96vw;
+		max-width: 96%;
+		margin: 5% 2%;
 	}
 	h1 {
 		margin: 5vh auto 2vh auto;
@@ -468,6 +470,7 @@ header {
 			width: 50vw;
 			max-width: @max-width/2;
 			max-height: 90vw;
+			margin: 0;
 			padding: 0 2vw;
 			opacity: 0;
 			.transition(opacity 400ms @cool-bezier);
