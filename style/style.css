@@ -817,6 +817,7 @@ header {
 .contacts .contact-way i:after {
   display: inline-block;
   position: absolute;
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 2rem;
   top: 32%;
   left: 0;
